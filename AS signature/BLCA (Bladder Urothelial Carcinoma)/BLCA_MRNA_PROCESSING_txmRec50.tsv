@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	BLCA	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	1.3427	-0.0636	62.5
+MRNA_PROCESSING	BLCA	PRPF4|9128	+	A3	chr9:116038050-116038825:116038050-116038828	Observed	1.3427	0.0054	56.25
+MRNA_PROCESSING	BLCA	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	1.1831	0.2663	68.75
+MRNA_PROCESSING	BLCA	CTSB|1508	-	A5	chr8:11710988-11718870:11710988-11718915	Observed	1.001	-0.0068	68.75
+MRNA_PROCESSING	BLCA	INSR|3643	-	SE	chr19:7143101-7150508:7150543-7152737	Observed	1.001	-0.2745	62.5
+MRNA_PROCESSING	BLCA	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.001	-0.1496	68.75
+MRNA_PROCESSING	BLCA	OPA1|4976	+	SE	chr3:193336725-193343881:193343991-193349401	Observed	1.001	0.1065	62.5
+MRNA_PROCESSING	BLCA	PQBP1|10084	+	SE	chrX:48759319-48759496:48759794-48760009	Observed	1.001	-0.1066	56.25

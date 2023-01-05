@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+PROTEIN_LOCALIZATION	BLCA	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	2.7172	0.4284	75
+PROTEIN_LOCALIZATION	BLCA	LEF1|51176	-	SE	chr4:109000770-109002742:109002825-109004512	Observed	1.6106	-0.2947	62.5
+PROTEIN_LOCALIZATION	BLCA	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	1.5916	0.3887	68.75
+PROTEIN_LOCALIZATION	BLCA	DMD|1756	-	SE	chrX:31140047-31144759:31144790-31152219	Observed	1.3482	-0.2531	56.25
+PROTEIN_LOCALIZATION	BLCA	DLG1|1739	-	SE	chr3:196869639-196876614:196876667-196921296	Observed	1.0005	-0.4643	68.75
+PROTEIN_LOCALIZATION	BLCA	POMT1|10585	+	RI	chr9:134385290:134385449-134385647:134385802	Observed	0.8917	-0.0451	56.25
+PROTEIN_LOCALIZATION	BLCA	NF1|4763	+	SE	chr17:29687721-29694243:29694296-29701031	Observed	0.876	0.4632	56.25
+PROTEIN_LOCALIZATION	BLCA	CCDC88A|55704	-	SE	chr2:55523659-55526975:55527055-55528342	Observed	0.792	-0.3003	87.5
+PROTEIN_LOCALIZATION	BLCA	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	0.0258	-0.2847	56.25

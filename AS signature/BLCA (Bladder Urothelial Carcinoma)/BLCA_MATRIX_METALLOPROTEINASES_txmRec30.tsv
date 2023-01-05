@@ -1,0 +1,16 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MATRIX_METALLOPROTEINASES	BLCA	EFS|10278	-	SE	chr14:23829490-23829764:23830042-23834217	Observed	2.2502	-0.2972	68.75
+MATRIX_METALLOPROTEINASES	BLCA	FN1|2335	-	MX	chr2:216230353-216232586:216232750-216236632:216230353-216235017:216235155-216236632	Observed	2.0858	0.1667	37.5
+MATRIX_METALLOPROTEINASES	BLCA	ELN|2006	+	SE	chr7:73471043-73471970:73472026-73474216	Observed	0.0052	0.152	62.5

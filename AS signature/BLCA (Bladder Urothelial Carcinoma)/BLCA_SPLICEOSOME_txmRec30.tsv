@@ -1,0 +1,27 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	BLCA	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.8907	-0.345	75
+SPLICEOSOME	BLCA	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	1.8313	-0.2216	62.5
+SPLICEOSOME	BLCA	ANXA6|309	-	SE	chr5:150489407-150490188:150490205-150496688	Observed	1.5061	-0.1998	68.75
+SPLICEOSOME	BLCA	ANO1|55107	+	RI	chr11:70033844:70035001-70035002:70035649	Observed	1.4982	0.3342	62.5
+SPLICEOSOME	BLCA	EIF4G3|8672	-	SE	chr1:21268823-21276496:21276601-21295967	Observed	1.3364	-0.2311	62.5
+SPLICEOSOME	BLCA	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	1.3128	-0.301	62.5
+SPLICEOSOME	BLCA	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.3043	-0.3055	62.5
+SPLICEOSOME	BLCA	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.0005	-0.1916	87.5
+SPLICEOSOME	BLCA	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	1.0005	-0.2459	62.5
+SPLICEOSOME	BLCA	NT5E|4907	+	SE	chr6:86199317-86200226:86200375-86201695	Observed	1.0005	-0.1762	56.25
+SPLICEOSOME	BLCA	SMARCA1|6594	-	SE	chrX:128626070-128627017:128627052-128630727	Observed	1.0005	-0.0678	56.25
+SPLICEOSOME	BLCA	MCL1|4170	-	RI	chr1:150547037:150548887-150548888:150549967	Observed	0.804	0.0788	56.25
+SPLICEOSOME	BLCA	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	0.5938	-0.216	75
+SPLICEOSOME	BLCA	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	0.2915	-0.2359	75
