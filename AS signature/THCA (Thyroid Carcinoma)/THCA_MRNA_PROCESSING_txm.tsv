@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	THCA	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	2.0094	-0.3596	62.5
+MRNA_PROCESSING	THCA	CD44|960	+	MX	chr11:35211612-35219668:35219793-35229652:35211612-35227659:35227790-35229652	Observed	2.0058	0.1803	12.5
+MRNA_PROCESSING	THCA	ZMYND11|10771	+	A5	chr10:180832-225934:180726-225934	Observed	1.9006	-0.0113	37.5
+MRNA_PROCESSING	THCA	OPA1|4976	+	SE	chr3:193336725-193343881:193343991-193349401	Observed	1.2818	-0.2189	62.5
+MRNA_PROCESSING	THCA	NUMA1|4926	-	RI	chr11:71718235:71718481-71719734:71719891	Observed	1.001	0.2692	56.25
+MRNA_PROCESSING	THCA	PQBP1|10084	+	SE	chrX:48759319-48759496:48759794-48760009	Observed	1.001	0.1183	56.25
+MRNA_PROCESSING	THCA	NUP62|23636	-	A3	chr19:50431105-50432583:50431072-50432583	Observed	0.9417	0.0085	56.25
+MRNA_PROCESSING	THCA	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	0.4012	-0.2497	62.5
+MRNA_PROCESSING	THCA	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	0.1397	-0.1525	56.25
+MRNA_PROCESSING	THCA	FGFR1|2260	-	A5	chr8:38285611-38285864:38285611-38285870	Observed	0.0223	-0.0379	56.25

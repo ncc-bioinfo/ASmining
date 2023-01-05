@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	THCA	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	4.3115	0.5496	81.25
+T_CELL_ACTIVATION	THCA	CD28|940	+	RI	chr2:204591356:204591421-204591674:204591712	Observed	3.4707	0.3242	75
+T_CELL_ACTIVATION	THCA	CD28|940	+	SE	chr2:204591712-204594371:204594495-204599507	Observed	2.8122	0.3735	87.5
+T_CELL_ACTIVATION	THCA	CD28|940	+	SE	chr2:204571471-204591356:204591712-204594371	Observed	2.6757	0.2757	81.25
+T_CELL_ACTIVATION	THCA	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	2.4549	0.2635	81.25
+T_CELL_ACTIVATION	THCA	IL2RA|3559	-	SE	chr10:6061904-6063441:6063656-6066207	Observed	2.2159	0.1088	87.5
+T_CELL_ACTIVATION	THCA	CD6|923	+	SE	chr11:60785485-60785761:60785865-60786726	Observed	2.0957	0.1037	87.5
+T_CELL_ACTIVATION	THCA	PTPRC|5788	+	SE	chr1:198661502-198665841:198666038-198668693	Observed	1.001	0.0296	87.5
+T_CELL_ACTIVATION	THCA	FYN|2534	-	SE	chr6:112017659-112020718:112020873-112024088	Observed	0.9327	0.2616	87.5

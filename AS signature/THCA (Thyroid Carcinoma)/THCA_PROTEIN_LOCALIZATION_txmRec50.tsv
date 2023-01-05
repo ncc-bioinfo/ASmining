@@ -1,0 +1,19 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+PROTEIN_LOCALIZATION	THCA	SYNE1|23345	-	SE	chr6:152615262-152621776:152621916-152623004	Observed	1.6422	-0.0721	62.5
+PROTEIN_LOCALIZATION	THCA	CCDC88A|55704	-	SE	chr2:55523659-55526975:55527055-55528342	Observed	1.2963	-0.3561	87.5
+PROTEIN_LOCALIZATION	THCA	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	1.2715	0.3249	68.75
+PROTEIN_LOCALIZATION	THCA	CCDC88A|55704	-	SE	chr2:55528413-55529008:55529208-55535945	Observed	1.001	-0.3622	87.5
+PROTEIN_LOCALIZATION	THCA	DLG1|1739	-	SE	chr3:196869639-196876614:196876667-196921296	Observed	1.001	-0.4325	68.75
+PROTEIN_LOCALIZATION	THCA	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	0.4499	-0.1396	56.25
