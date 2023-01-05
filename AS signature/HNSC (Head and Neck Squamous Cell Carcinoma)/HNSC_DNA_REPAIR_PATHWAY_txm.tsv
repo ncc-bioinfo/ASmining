@@ -1,0 +1,19 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPAIR_PATHWAY	HNSC	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	2.1694	-0.5049	56.25
+DNA_REPAIR_PATHWAY	HNSC	HLTF|6596	-	RI	chr3:148747904:148749150-148749988:148750159	Observed	1.8966	-0.3086	25
+DNA_REPAIR_PATHWAY	HNSC	BCOR|54880	-	A5	chrX:39911653-39913091:39911653-39913139	Observed	1.001	0.4692	68.75
+DNA_REPAIR_PATHWAY	HNSC	CHEK2|11200	-	SE	chr22:29108005-29115383:29115473-29120965	Observed	1.001	-0.1163	56.25
+DNA_REPAIR_PATHWAY	HNSC	EZH2|2146	-	A5	chr7:148529842-148543562:148529842-148543589	Observed	1.001	-0.0694	56.25
+DNA_REPAIR_PATHWAY	HNSC	TMEM171|134285	+	A3	chr5:72424358-72427365:72424358-72427368	Observed	0.8277	0.0825	56.25

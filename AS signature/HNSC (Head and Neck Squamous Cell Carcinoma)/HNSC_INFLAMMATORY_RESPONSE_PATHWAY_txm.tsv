@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	PTK2B|2185	+	SE	chr8:27301788-27303311:27303436-27308266	Observed	4.0526	-0.3691	100
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	IL32|9235	+	SE	chr16:3115495-3115622:3115688-3115785	Observed	3.9686	0.4191	87.5
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	CD46|4179	+	SE	chr1:207959027-207963598:207963690-207966864	Observed	3.1641	0.289	37.5
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	CD80|941	-	SE	chr3:119246688-119248689:119248784-119255984	Observed	1.4999	0.0192	62.5
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	1.1294	-0.0967	56.25
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	CD46|4179	+	SE	chr1:207940540-207941124:207941168-207943666	Observed	1.0282	0.1647	62.5
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.0005	0.0329	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	MYD88|4615	+	A3	chr3:38180519-38181355:38180519-38181879	Observed	1.0005	-0.0925	56.25
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	ITGAM|3684	+	SE	chr16:31308975-31309063:31309275-31332562	Observed	0.9301	0.1105	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	HNSC	CD40|958	+	SE	chr20:44751858-44755279:44755380-44756777	Observed	0.7494	0.135	56.25

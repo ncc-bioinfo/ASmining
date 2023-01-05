@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	5.0071	0.4716	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	3.1157	-0.4657	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	DNM2|1785	+	SE	chr19:10916643-10919245:10919256-10922940	Observed	2.9533	-0.3094	37.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	2.1235	0.3783	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	1.7468	-0.3597	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	MUC1|4582	-	A3	chr1:155162074-155162577:155162038-155162577	Observed	1.4154	0.1651	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	1.414	-0.1586	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	ZEB1|6935	+	A3	chr10:31750166-31784705:31750166-31784708	Observed	1.1594	0.1587	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	0.9461	-0.2426	81.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	CLK2|1196	-	SE	chr1:155238150-155238499:155238583-155239279	Observed	0.8452	0.3198	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	HNSC	HDAC6|10013	+	RI	chrX:48673082:48673147-48673241:48673300	Observed	0.3438	-0.2781	56.25

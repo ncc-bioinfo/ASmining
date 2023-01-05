@@ -1,0 +1,26 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	HNSC	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	2.767	0.0519	87.5
+CELL_CYCLE_PATHWAY	HNSC	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	2.489	0.0896	62.5
+CELL_CYCLE_PATHWAY	HNSC	AURKA|6790	-	A5	chr20:54965721-54967210:54965721-54967224	Observed	2.4582	0.1081	31.25
+CELL_CYCLE_PATHWAY	HNSC	AURKA|6790	-	SE	chr20:54963258-54965612:54965721-54967210	Observed	1.9999	-0.0273	50
+CELL_CYCLE_PATHWAY	HNSC	AURKA|6790	-	SE	chr20:54963258-54963743:54963840-54965612	Observed	1.6382	0.1145	56.25
+CELL_CYCLE_PATHWAY	HNSC	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967210	Observed	1.4322	0.0258	56.25
+CELL_CYCLE_PATHWAY	HNSC	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	1.1164	-0.0291	56.25
+CELL_CYCLE_PATHWAY	HNSC	C2|717	+	MX	chr6:31901560-31901644:31901742-31905096:31901560-31903700:31903838-31905096	Observed	1.0005	-0.0688	68.75
+CELL_CYCLE_PATHWAY	HNSC	BRCA1|672	-	A3	chr17:41251897-41256139:41251894-41256139	Observed	0.6563	-0.0959	56.25
+CELL_CYCLE_PATHWAY	HNSC	BRCA1|672	-	A5	chr17:41243049-41243452:41243049-41246761	Observed	0.3507	0.0049	62.5
+CELL_CYCLE_PATHWAY	HNSC	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	0.1336	-5e-04	68.75
+CELL_CYCLE_PATHWAY	HNSC	IFI27|3429	+	SE	chr14:94577143-94577971:94578119-94581197	Observed	0.0427	-0.0109	56.25
+CELL_CYCLE_PATHWAY	HNSC	ATM|472	+	SE	chr11:108093913-108095511:108095598-108098322	Observed	0.0123	0.0952	56.25
