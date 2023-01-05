@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	LUSC	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	5.0788	0.5439	87.5
+T_CELL_ACTIVATION	LUSC	PDCD1|5133	-	SE	chr2:242794135-242794350:242794505-242794773	Observed	4.0455	0.3013	81.25
+T_CELL_ACTIVATION	LUSC	CD6|923	+	SE	chr11:60785485-60785761:60785865-60786726	Observed	2.9834	0.1383	87.5
+T_CELL_ACTIVATION	LUSC	PTPRC|5788	+	SE	chr1:198668833-198671516:198671659-198672427	Observed	2.2846	0.1582	81.25
+T_CELL_ACTIVATION	LUSC	PTPRC|5788	+	SE	chr1:198661502-198665841:198666038-198668693	Observed	2.0879	0.0756	87.5
+T_CELL_ACTIVATION	LUSC	FYN|2534	-	SE	chr6:112017659-112020718:112020873-112024088	Observed	1.6095	0.3061	87.5
+T_CELL_ACTIVATION	LUSC	IL2RA|3559	-	SE	chr10:6061904-6063441:6063656-6066207	Observed	1.6042	0.0317	87.5
+T_CELL_ACTIVATION	LUSC	CD28|940	+	RI	chr2:204591356:204591421-204591674:204591712	Observed	1.4751	0.0598	75
+T_CELL_ACTIVATION	LUSC	CD28|940	+	SE	chr2:204591712-204594371:204594495-204599507	Observed	1.4681	0.2028	87.5
+T_CELL_ACTIVATION	LUSC	CD28|940	+	SE	chr2:204571471-204591356:204591712-204594371	Observed	1.4156	0.1427	81.25
+T_CELL_ACTIVATION	LUSC	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	0.1678	0.3882	81.25

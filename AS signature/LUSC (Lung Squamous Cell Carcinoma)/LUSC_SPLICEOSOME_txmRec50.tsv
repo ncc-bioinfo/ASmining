@@ -1,0 +1,26 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	LUSC	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	2.0425	-0.2937	62.5
+SPLICEOSOME	LUSC	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	1.6209	-0.2321	75
+SPLICEOSOME	LUSC	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.5255	-0.3866	62.5
+SPLICEOSOME	LUSC	NT5E|4907	+	SE	chr6:86199317-86200226:86200375-86201695	Observed	1.5092	-0.1455	56.25
+SPLICEOSOME	LUSC	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	1.2727	-0.1907	62.5
+SPLICEOSOME	LUSC	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.174	-0.391	68.75
+SPLICEOSOME	LUSC	USP15|9958	+	SE	chr12:62719714-62743002:62743088-62749112	Observed	1.1572	-0.1059	56.25
+SPLICEOSOME	LUSC	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	1.001	0.0942	56.25
+SPLICEOSOME	LUSC	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	0.9441	0.3483	56.25
+SPLICEOSOME	LUSC	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	0.8157	-0.2453	62.5
+SPLICEOSOME	LUSC	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	0.8057	-0.3647	75
+SPLICEOSOME	LUSC	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	0.4899	-0.2195	87.5
+SPLICEOSOME	LUSC	ANXA6|309	-	SE	chr5:150489407-150490188:150490205-150496688	Observed	0.0201	-0.1938	68.75

@@ -1,0 +1,26 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	LUSC	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	2.2416	0.2444	62.5
+MRNA_PROCESSING	LUSC	ABCB1|5243	-	SE	chr7:87195557-87196101:87196292-87199488	Observed	2.1592	-0.2272	43.75
+MRNA_PROCESSING	LUSC	NUMA1|4926	-	SE	chr11:71721900-71723447:71723488-71723941	Observed	1.6718	-0.0261	56.25
+MRNA_PROCESSING	LUSC	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.1468	-0.2768	68.75
+MRNA_PROCESSING	LUSC	PRPF4|9128	+	A3	chr9:116038050-116038825:116038050-116038828	Observed	1.0798	0.0875	56.25
+MRNA_PROCESSING	LUSC	OPA1|4976	+	SE	chr3:193336725-193343881:193343991-193349401	Observed	1.0005	0.0431	62.5
+MRNA_PROCESSING	LUSC	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	1.0005	-0.1265	62.5
+MRNA_PROCESSING	LUSC	INSR|3643	-	SE	chr19:7143101-7150508:7150543-7152737	Observed	0.9638	-0.1673	62.5
+MRNA_PROCESSING	LUSC	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	0.5389	-0.1893	56.25
+MRNA_PROCESSING	LUSC	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	0.5342	0.1156	68.75
+MRNA_PROCESSING	LUSC	CTSB|1508	-	A5	chr8:11710988-11718870:11710988-11718915	Observed	0.4146	-0.0493	68.75
+MRNA_PROCESSING	LUSC	PQBP1|10084	+	A5	chrX:48755365-48755775:48755297-48755775	Observed	0.2232	-0.196	56.25
+MRNA_PROCESSING	LUSC	FGFR1|2260	-	A5	chr8:38285611-38285864:38285611-38285870	Observed	0.0202	-0.0017	56.25
