@@ -1,0 +1,19 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+S_PHASE	KIRC	CDC25B|994	+	A5	chr20:3777378-3778269:3776526-3778269	Observed	2.063	-0.3949	31.25
+S_PHASE	KIRC	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.4577	-0.3091	56.25
+S_PHASE	KIRC	CCND3|896	-	SE	chr6:41905132-41908108:41908323-42016239	Observed	1.2155	-0.2816	56.25
+S_PHASE	KIRC	ARNT|405	-	SE	chr1:150812130-150814900:150814944-150818739	Observed	1.001	-0.0352	62.5
+S_PHASE	KIRC	MAPT|4137	+	MX	chr17:44039836-44049225:44049311-44064406:44039836-44055741:44055806-44064406	Observed	1.001	-0.02	56.25
+S_PHASE	KIRC	INSR|3643	-	SE	chr19:7143101-7150508:7150543-7152737	Observed	0.7099	-0.1758	68.75
