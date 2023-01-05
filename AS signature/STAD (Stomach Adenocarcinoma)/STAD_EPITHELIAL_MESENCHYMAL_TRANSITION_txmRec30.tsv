@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	STAD	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	3.39	-0.5941	81.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	STAD	PRMT2|3275	+	SE	chr21:48055675-48056351:48056459-48056808	Observed	3.3495	0.5755	37.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	STAD	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	3.2571	0.486	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	STAD	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.3223	-0.5492	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	STAD	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	1.001	-0.1882	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	STAD	ZEB1|6935	+	A3	chr10:31750166-31784705:31750166-31784708	Observed	1.001	0.1875	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	STAD	MUC1|4582	-	A3	chr1:155162074-155162577:155162038-155162577	Observed	0.3406	0.0096	68.75

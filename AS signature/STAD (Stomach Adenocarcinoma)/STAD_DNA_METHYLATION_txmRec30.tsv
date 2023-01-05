@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_METHYLATION	STAD	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	3.9214	-0.5445	93.75
+DNA_METHYLATION	STAD	ZEB1|6935	+	SE	chr10:31608221-31749966:31750166-31784708	Observed	2.9851	-0.4604	43.75
+DNA_METHYLATION	STAD	CDKAL1|54901	+	SE	chr6:21065459-21108632:21108694-21198252	Observed	1.0005	-0.1488	56.25
+DNA_METHYLATION	STAD	PEG3|5178	-	A5	chr19:57334204-57334958:57334204-57334961	Observed	1.0005	-0.1378	56.25
+DNA_METHYLATION	STAD	STAG2|10735	+	SE	chrX:123095706-123155217:123155281-123156381	Observed	1.0005	0.032	62.5
+DNA_METHYLATION	STAD	MAPK7|5598	+	A5	chr17:19281943-19282209:19281855-19282209	Observed	0.3069	-0.1243	62.5
+DNA_METHYLATION	STAD	TET2|54790	+	SE	chr4:106068136-106111517:106111662-106155054	Observed	0.0348	-0.099	68.75
