@@ -1,0 +1,27 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	SKCM	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	1.3405	-0.2125	75
+SPLICEOSOME	SKCM	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	1.2785	-0.2156	62.5
+SPLICEOSOME	SKCM	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.0741	-0.2889	75
+SPLICEOSOME	SKCM	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.0005	-0.2219	87.5
+SPLICEOSOME	SKCM	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	1.0005	0.011	56.25
+SPLICEOSOME	SKCM	USP15|9958	+	SE	chr12:62719714-62743002:62743088-62749112	Observed	1.0005	-0.1423	56.25
+SPLICEOSOME	SKCM	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	0.8239	0.2669	56.25
+SPLICEOSOME	SKCM	EIF4G3|8672	-	SE	chr1:21268823-21276496:21276601-21295967	Observed	0.5667	-0.292	62.5
+SPLICEOSOME	SKCM	DIS3|22894	-	MX	chr13:73352518-73354984:73355141-73355743:73352518-73355427:73355494-73355743	Observed	0.5433	0.1027	56.25
+SPLICEOSOME	SKCM	ANO1|55107	+	RI	chr11:70033844:70035001-70035002:70035649	Observed	0.5361	0.288	62.5
+SPLICEOSOME	SKCM	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	0.4326	-0.2613	62.5
+SPLICEOSOME	SKCM	NT5E|4907	+	SE	chr6:86199317-86200226:86200375-86201695	Observed	0.339	-0.212	56.25
+SPLICEOSOME	SKCM	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	0.3281	-0.3277	68.75
+SPLICEOSOME	SKCM	MCL1|4170	-	RI	chr1:150547037:150548887-150548888:150549967	Observed	0.3081	0.0467	56.25

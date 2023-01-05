@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	SKCM	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	1.4138	-0.1701	62.5
+MRNA_PROCESSING	SKCM	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	1.001	0.1869	62.5
+MRNA_PROCESSING	SKCM	INSR|3643	-	SE	chr19:7143101-7150508:7150543-7152737	Observed	1.001	-0.1814	62.5
+MRNA_PROCESSING	SKCM	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	1.001	-0.1981	62.5
+MRNA_PROCESSING	SKCM	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.001	-0.0803	68.75
+MRNA_PROCESSING	SKCM	NUMA1|4926	-	RI	chr11:71718235:71718481-71719734:71719891	Observed	1.001	0.1238	56.25
+MRNA_PROCESSING	SKCM	PRPF4|9128	+	A3	chr9:116038050-116038825:116038050-116038828	Observed	1.001	0.1705	56.25
+MRNA_PROCESSING	SKCM	NUMA1|4926	-	SE	chr11:71721900-71723447:71723488-71723941	Observed	0.3058	-0.0801	56.25
