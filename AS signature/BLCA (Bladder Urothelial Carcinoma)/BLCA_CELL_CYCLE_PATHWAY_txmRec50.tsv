@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	BLCA	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	2.6468	0.1565	68.75
+CELL_CYCLE_PATHWAY	BLCA	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	1.9417	0.1758	62.5
+CELL_CYCLE_PATHWAY	BLCA	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	1.6404	0.1852	62.5
+CELL_CYCLE_PATHWAY	BLCA	BRCA1|672	-	A5	chr17:41243049-41243452:41243049-41246761	Observed	1.5039	0.1495	62.5
+CELL_CYCLE_PATHWAY	BLCA	ATM|472	+	SE	chr11:108093913-108095511:108095598-108098322	Observed	1.2938	0.1591	56.25
+CELL_CYCLE_PATHWAY	BLCA	MYBL2|4605	+	SE	chr20:42302539-42310424:42310495-42311434	Observed	1.2628	0.1953	62.5
+CELL_CYCLE_PATHWAY	BLCA	AURKA|6790	-	SE	chr20:54963258-54965612:54965721-54967224	Observed	1.001	0.2882	56.25
+CELL_CYCLE_PATHWAY	BLCA	BRCA1|672	-	A3	chr17:41251897-41256139:41251894-41256139	Observed	1.001	0.0012	56.25

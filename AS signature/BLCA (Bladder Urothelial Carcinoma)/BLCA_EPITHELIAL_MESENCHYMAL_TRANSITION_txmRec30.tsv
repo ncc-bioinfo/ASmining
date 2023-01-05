@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	3.0584	-0.2266	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	2.8449	-0.4462	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	1.402	0.327	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	1.2788	-0.4002	81.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	MUC1|4582	-	A3	chr1:155162074-155162577:155162038-155162577	Observed	1.001	-0.0087	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	ZEB1|6935	+	A3	chr10:31750166-31784705:31750166-31784708	Observed	1.001	0.2328	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	CLK2|1196	-	SE	chr1:155238150-155238499:155238583-155239279	Observed	0.8618	0.3224	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	0.8141	0.4154	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	BLCA	HDAC6|10013	+	RI	chrX:48673082:48673147-48673241:48673300	Observed	0.571	-0.3012	56.25
