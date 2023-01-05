@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	KIRP	NFASC|23114	+	SE	chr1:204913534-204919685:204919702-204921139	Observed	2.1744	0.3825	37.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	KIRP	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	1.3023	0.0685	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	KIRP	HDAC6|10013	+	RI	chrX:48673082:48673147-48673241:48673300	Observed	1.2603	-0.2557	56.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	KIRP	CLK2|1196	-	SE	chr1:155238150-155238499:155238583-155239279	Observed	1.0005	0.168	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	KIRP	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	1.0005	0.0794	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	KIRP	MUC1|4582	-	A3	chr1:155162074-155162577:155162038-155162577	Observed	1.0005	-0.0395	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	KIRP	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	0.2869	-0.2069	68.75

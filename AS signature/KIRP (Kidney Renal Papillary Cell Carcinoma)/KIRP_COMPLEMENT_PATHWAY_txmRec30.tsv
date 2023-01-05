@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+COMPLEMENT_PATHWAY	KIRP	CD300A|11314	+	SE	chr17:72462882-72469675:72470013-72470671	Observed	1.9735	-0.1011	50
+COMPLEMENT_PATHWAY	KIRP	AGBL2|79841	-	SE	chr11:47703647-47707445:47707601-47711628	Observed	1.3516	-0.1041	62.5
+COMPLEMENT_PATHWAY	KIRP	NCOR2|9612	-	A5	chr12:124810916-124811955:124810916-124812093	Observed	1.1851	-0.2395	56.25
+COMPLEMENT_PATHWAY	KIRP	BRCA1|672	-	A5	chr17:41276132-41277199:41276132-41277294	Observed	1.0005	-0.038	56.25
+COMPLEMENT_PATHWAY	KIRP	DYSF|8291	+	SE	chr2:71766369-71776480:71776521-71778171	Observed	1.0005	0.0412	62.5
+COMPLEMENT_PATHWAY	KIRP	FCGR2A|2212	+	A3	chr1:161475797-161476124:161475797-161476127	Observed	1.0005	0.1078	68.75
+COMPLEMENT_PATHWAY	KIRP	PQBP1|10084	+	A3	chrX:48759319-48759510:48759319-48760009	Observed	1.0005	-0.2232	75
+COMPLEMENT_PATHWAY	KIRP	C2|717	+	SE	chr6:31901742-31903700:31903838-31905096	Observed	0.5575	0.2256	62.5
+COMPLEMENT_PATHWAY	KIRP	CFD|1675	+	A5	chr19:859765-860617:859744-860617	Observed	0.451	-0.193	68.75
+COMPLEMENT_PATHWAY	KIRP	SNCA|6622	-	A5	chr4:90756843-90757894:90756843-90758113	Observed	0.4097	0.1198	56.25
+COMPLEMENT_PATHWAY	KIRP	LTA|4049	+	A3	chr6:31540810-31541058:31540810-31541302	Observed	0.0074	-0.0922	62.5

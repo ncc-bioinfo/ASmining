@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+ANGIOGENESIS	KIRP	TEK|7010	+	SE	chr9:27173360-27180238:27180366-27183457	Observed	2.9063	0.5704	87.5
+ANGIOGENESIS	KIRP	TIE1|7075	+	SE	chr1:43773243-43773467:43773595-43774657	Observed	1.9535	0.581	81.25
+ANGIOGENESIS	KIRP	PKD2|5311	+	SE	chr4:88977419-88979135:88979255-88983058	Observed	1.7605	0.6902	75
+ANGIOGENESIS	KIRP	ERG|2078	-	SE	chr21:39795483-39817327:39817544-39947586	Observed	1.0005	0.3938	75
+ANGIOGENESIS	KIRP	TEK|7010	+	A5	chr9:27205063-27206580:27205060-27206580	Observed	1.0005	0.4662	87.5
+ANGIOGENESIS	KIRP	VCAN|1462	+	SE	chr5:82808215-82832826:82838087-82841356	Observed	1.0005	0.6654	81.25
+ANGIOGENESIS	KIRP	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	0.8965	-0.6522	81.25
+ANGIOGENESIS	KIRP	HSPG2|3339	-	A3	chr1:22211170-22211260:22211167-22211260	Observed	0.2348	0.1835	81.25
