@@ -1,0 +1,30 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	LUAD	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	4.8568	0.493	87.5
+T_CELL_ACTIVATION	LUAD	FASLG|356	+	SE	chr1:172628689-172629235:172629280-172633474	Observed	3.6014	0.3934	56.25
+T_CELL_ACTIVATION	LUAD	CTLA4|1493	+	SE	chr2:204735656-204736101:204736210-204737431	Observed	2.4205	0.0656	43.75
+T_CELL_ACTIVATION	LUAD	CD28|940	+	SE	chr2:204591712-204594371:204594495-204599507	Observed	1.826	0.18	87.5
+T_CELL_ACTIVATION	LUAD	FYN|2534	-	SE	chr6:112017659-112020718:112020873-112024088	Observed	1.7497	0.2514	87.5
+T_CELL_ACTIVATION	LUAD	CD6|923	+	SE	chr11:60785485-60785761:60785865-60786726	Observed	1.5768	0.1431	87.5
+T_CELL_ACTIVATION	LUAD	PDCD1|5133	-	A5	chr2:242794505-242794773:242794505-242795009	Observed	1.4164	0.0262	62.5
+T_CELL_ACTIVATION	LUAD	CD80|941	-	SE	chr3:119246688-119248689:119248784-119255984	Observed	1.3551	-0.0183	62.5
+T_CELL_ACTIVATION	LUAD	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	1.3482	0.3312	81.25
+T_CELL_ACTIVATION	LUAD	CD46|4179	+	SE	chr1:207940540-207941124:207941168-207943666	Observed	1.3358	0.006	56.25
+T_CELL_ACTIVATION	LUAD	CD6|923	+	SE	chr11:60781035-60781391:60781486-60783185	Observed	1.001	0.0508	62.5
+T_CELL_ACTIVATION	LUAD	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.001	0	81.25
+T_CELL_ACTIVATION	LUAD	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	1.001	-0.0773	62.5
+T_CELL_ACTIVATION	LUAD	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.001	-0.1888	62.5
+T_CELL_ACTIVATION	LUAD	PTPRC|5788	+	SE	chr1:198661502-198665841:198666038-198668693	Observed	1.001	0.0318	87.5
+T_CELL_ACTIVATION	LUAD	CD28|940	+	RI	chr2:204591356:204591421-204591674:204591712	Observed	0.8384	0.0739	75
+T_CELL_ACTIVATION	LUAD	CD28|940	+	SE	chr2:204571471-204591356:204591712-204594371	Observed	0.6708	0.0862	81.25

@@ -1,0 +1,19 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+NFKB_PATHWAY	LUAD	IKBKG|8517	+	A5	chrX:153790003-153791025:153789999-153791025	Observed	1.5686	-0.0146	56.25
+NFKB_PATHWAY	LUAD	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	1.1923	0.2654	56.25
+NFKB_PATHWAY	LUAD	PLAU|5328	+	A5	chr10:75670980-75671283:75670976-75671283	Observed	0.7117	-0.1962	75
+NFKB_PATHWAY	LUAD	NFASC|23114	+	SE	chr1:204913534-204919685:204919702-204921139	Observed	0.5742	0.1083	56.25
+NFKB_PATHWAY	LUAD	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	0.4842	-0.0028	68.75
+NFKB_PATHWAY	LUAD	CASP8|841	+	A5	chr2:202098345-202098739:202098277-202098739	Observed	0.3432	0.0083	56.25

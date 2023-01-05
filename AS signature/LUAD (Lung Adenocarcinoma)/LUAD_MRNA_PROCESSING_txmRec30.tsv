@@ -1,0 +1,26 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	LUAD	PQBP1|10084	+	A5	chrX:48755376-48755775:48755297-48755775	Observed	2.5348	-0.2586	50
+MRNA_PROCESSING	LUAD	BRCA1|672	-	SE	chr17:41228628-41231351:41231416-41234421	Observed	2.4376	-0.1552	31.25
+MRNA_PROCESSING	LUAD	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	1.6645	0.175	62.5
+MRNA_PROCESSING	LUAD	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	1.4421	0.1784	68.75
+MRNA_PROCESSING	LUAD	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.2126	-0.1937	68.75
+MRNA_PROCESSING	LUAD	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	1.2074	-0.1387	62.5
+MRNA_PROCESSING	LUAD	CTSB|1508	-	A5	chr8:11710988-11718870:11710988-11718915	Observed	1.0005	0.0591	68.75
+MRNA_PROCESSING	LUAD	FGFR1|2260	-	A5	chr8:38285611-38285864:38285611-38285870	Observed	1.0005	0.0651	56.25
+MRNA_PROCESSING	LUAD	NUP62|23636	-	A3	chr19:50431105-50432583:50431072-50432583	Observed	0.9805	0.1555	56.25
+MRNA_PROCESSING	LUAD	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	0.4313	-0.1272	56.25
+MRNA_PROCESSING	LUAD	PRPF4|9128	+	A3	chr9:116038050-116038825:116038050-116038828	Observed	0.392	0.0414	56.25
+MRNA_PROCESSING	LUAD	PQBP1|10084	+	SE	chrX:48759319-48759496:48759794-48760009	Observed	0.2812	-0.2919	56.25
+MRNA_PROCESSING	LUAD	NUMA1|4926	-	SE	chr11:71721900-71723447:71723488-71723941	Observed	0.0043	-0.1505	56.25
