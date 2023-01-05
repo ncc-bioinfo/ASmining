@@ -1,0 +1,25 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPAIR_PATHWAY	THCA	PRKDC|5591	-	SE	chr8:48691654-48694723:48694815-48694939	Observed	3.0832	-0.4413	37.5
+DNA_REPAIR_PATHWAY	THCA	DIO2|1734	-	SE	chr14:80669631-80671945:80672078-80677594	Observed	2.4845	0.456	18.75
+DNA_REPAIR_PATHWAY	THCA	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	2.0379	-0.5242	56.25
+DNA_REPAIR_PATHWAY	THCA	REV3L|5980	-	SE	chr6:111650941-111651389:111651515-111652879	Observed	1.8394	0.4951	75
+DNA_REPAIR_PATHWAY	THCA	CHEK2|11200	-	SE	chr22:29108005-29115383:29115473-29120965	Observed	1.3541	-0.0367	56.25
+DNA_REPAIR_PATHWAY	THCA	XRCC3|7517	-	SE	chr14:104177904-104179212:104179305-104181761	Observed	1.3439	-0.0185	68.75
+DNA_REPAIR_PATHWAY	THCA	NFASC|23114	+	SE	chr1:204913534-204919685:204919702-204921139	Observed	1.1493	-0.2475	75
+DNA_REPAIR_PATHWAY	THCA	EZH2|2146	-	A5	chr7:148529842-148543562:148529842-148543589	Observed	1.0005	-0.0792	56.25
+DNA_REPAIR_PATHWAY	THCA	SMARCAL1|50485	+	SE	chr2:217300219-217303143:217303208-217311741	Observed	1.0005	-0.2842	56.25
+DNA_REPAIR_PATHWAY	THCA	TMEM171|134285	+	A3	chr5:72424358-72427365:72424358-72427368	Observed	1.0005	0.0422	56.25
+DNA_REPAIR_PATHWAY	THCA	BCOR|54880	-	A5	chrX:39911653-39913091:39911653-39913139	Observed	0.855	0.4667	68.75
+DNA_REPAIR_PATHWAY	THCA	BIN1|274	-	SE	chr2:127808819-127815049:127815177-127816587	Observed	0.1653	0.1168	56.25

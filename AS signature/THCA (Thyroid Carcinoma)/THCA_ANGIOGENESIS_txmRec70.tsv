@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+ANGIOGENESIS	THCA	TIE1|7075	+	SE	chr1:43773243-43773467:43773595-43774657	Observed	3.7731	0.5655	81.25
+ANGIOGENESIS	THCA	SULF2|55959	-	SE	chr20:46287136-46288143:46288196-46288441	Observed	3.5111	0.599	81.25
+ANGIOGENESIS	THCA	VCAN|1462	+	SE	chr5:82808215-82832826:82838087-82841356	Observed	2.5742	0.5673	81.25
+ANGIOGENESIS	THCA	TEK|7010	+	A5	chr9:27205063-27206580:27205060-27206580	Observed	2.1232	0.5898	87.5
+ANGIOGENESIS	THCA	TEK|7010	+	SE	chr9:27173360-27180238:27180366-27183457	Observed	2.1121	0.607	87.5
+ANGIOGENESIS	THCA	ERG|2078	-	SE	chr21:39795483-39817327:39817544-39947586	Observed	2.0026	0.4556	75
+ANGIOGENESIS	THCA	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.7088	0.5242	93.75
+ANGIOGENESIS	THCA	PKD2|5311	+	SE	chr4:88977419-88979135:88979255-88983058	Observed	1.3743	0.5649	75
+ANGIOGENESIS	THCA	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	1.1415	-0.571	81.25
+ANGIOGENESIS	THCA	HSPG2|3339	-	A3	chr1:22211170-22211260:22211167-22211260	Observed	0.2909	0.225	81.25

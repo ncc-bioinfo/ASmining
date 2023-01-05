@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+COMPLEMENT_PATHWAY	THCA	FCGR2A|2212	+	A3	chr1:161475797-161476124:161475797-161476127	Observed	1.8152	0.1154	68.75
+COMPLEMENT_PATHWAY	THCA	LTA|4049	+	A3	chr6:31540810-31541058:31540810-31541302	Observed	1.5348	0.0265	62.5
+COMPLEMENT_PATHWAY	THCA	CIITA|4261	+	A3	chr16:10992589-10992779:10992589-10992782	Observed	1.5257	0.1709	68.75
+COMPLEMENT_PATHWAY	THCA	AGBL2|79841	-	SE	chr11:47703647-47707445:47707601-47711628	Observed	1.4171	-0.044	62.5
+COMPLEMENT_PATHWAY	THCA	SNCA|6622	-	A5	chr4:90756843-90757894:90756843-90758113	Observed	1.4154	-0.1831	56.25
+COMPLEMENT_PATHWAY	THCA	CFD|1675	+	A5	chr19:859765-860617:859744-860617	Observed	1.1801	-0.187	68.75
+COMPLEMENT_PATHWAY	THCA	BRCA1|672	-	A5	chr17:41276132-41277199:41276132-41277294	Observed	1.001	0.053	56.25
+COMPLEMENT_PATHWAY	THCA	C2|717	+	SE	chr6:31901742-31903700:31903838-31905096	Observed	1.001	-0.0387	62.5
+COMPLEMENT_PATHWAY	THCA	PQBP1|10084	+	A3	chrX:48759319-48759510:48759319-48760009	Observed	1.001	0.1853	75
+COMPLEMENT_PATHWAY	THCA	GATA3|2625	+	A3	chr10:8100804-8105956:8100804-8105959	Observed	0.7741	0.0932	56.25
+COMPLEMENT_PATHWAY	THCA	DYSF|8291	+	SE	chr2:71766369-71776480:71776521-71778171	Observed	0.7196	0.2969	62.5
