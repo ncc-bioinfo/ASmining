@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	LIHC	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	3.5017	0.4484	87.5
+T_CELL_ACTIVATION	LIHC	FYN|2534	-	SE	chr6:112017659-112020718:112020873-112024088	Observed	3.2914	0.4886	87.5
+T_CELL_ACTIVATION	LIHC	IL2RA|3559	-	SE	chr10:6061904-6063441:6063656-6066207	Observed	2.4791	0.2217	87.5
+T_CELL_ACTIVATION	LIHC	CD6|923	+	SE	chr11:60785485-60785761:60785865-60786726	Observed	1.4997	0.2419	87.5
+T_CELL_ACTIVATION	LIHC	PDCD1|5133	-	SE	chr2:242794135-242794350:242794505-242794773	Observed	1.2644	0.2913	81.25
+T_CELL_ACTIVATION	LIHC	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.0005	0.2723	81.25
+T_CELL_ACTIVATION	LIHC	PTPRC|5788	+	SE	chr1:198668833-198671516:198671659-198672427	Observed	0.7207	0.1685	81.25
+T_CELL_ACTIVATION	LIHC	CD28|940	+	SE	chr2:204591712-204594371:204594495-204599507	Observed	0.6433	0.2304	87.5
+T_CELL_ACTIVATION	LIHC	CD28|940	+	RI	chr2:204591356:204591421-204591674:204591712	Observed	0.565	0.1841	75
