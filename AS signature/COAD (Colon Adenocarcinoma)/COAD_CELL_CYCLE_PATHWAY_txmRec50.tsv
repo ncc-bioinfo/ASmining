@@ -1,0 +1,25 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	COAD	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	1.5171	0.2699	62.5
+CELL_CYCLE_PATHWAY	COAD	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967210	Observed	1.4091	-0.2627	56.25
+CELL_CYCLE_PATHWAY	COAD	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	1.2689	0.1566	62.5
+CELL_CYCLE_PATHWAY	COAD	AURKA|6790	-	A5	chr20:54963258-54966999:54963258-54967210	Observed	1.001	-0.2371	62.5
+CELL_CYCLE_PATHWAY	COAD	AURKA|6790	-	SE	chr20:54963258-54963743:54963840-54965612	Observed	1.001	0.0036	56.25
+CELL_CYCLE_PATHWAY	COAD	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	1.001	0.109	56.25
+CELL_CYCLE_PATHWAY	COAD	C2|717	+	MX	chr6:31901560-31901644:31901742-31905096:31901560-31903700:31903838-31905096	Observed	1.001	-0.0144	68.75
+CELL_CYCLE_PATHWAY	COAD	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	1.001	0.0659	87.5
+CELL_CYCLE_PATHWAY	COAD	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	1.001	-0.1126	68.75
+CELL_CYCLE_PATHWAY	COAD	IFI27|3429	+	SE	chr14:94577143-94577971:94578119-94581197	Observed	1.001	0.1605	56.25
+CELL_CYCLE_PATHWAY	COAD	ATM|472	+	SE	chr11:108093913-108095511:108095598-108098322	Observed	0.4925	-0.0426	56.25
+CELL_CYCLE_PATHWAY	COAD	BRCA1|672	-	A3	chr17:41251897-41256139:41251894-41256139	Observed	0.0073	0.0019	56.25

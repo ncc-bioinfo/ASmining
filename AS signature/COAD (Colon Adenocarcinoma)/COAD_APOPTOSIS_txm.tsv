@@ -1,0 +1,30 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+APOPTOSIS	COAD	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	3.343	0.5297	93.75
+APOPTOSIS	COAD	FYN|2534	-	SE	chr6:112017659-112020718:112020873-112024088	Observed	2.3022	0.3671	68.75
+APOPTOSIS	COAD	IL32|9235	+	SE	chr16:3115495-3115622:3115688-3115785	Observed	2.2832	0.4789	93.75
+APOPTOSIS	COAD	RPAIN|84268	+	MX	chr17:5329402-5329556:5329619-5335862:5329402-5331391:5331531-5335862	Observed	1.8487	0.2567	50
+APOPTOSIS	COAD	GLS2|27165	-	SE	chr12:56868680-56868828:56868894-56869408	Observed	1.8046	0.0329	25
+APOPTOSIS	COAD	NUMA1|4926	-	SE	chr11:71721900-71723447:71723488-71723941	Observed	1.7915	-0.1598	50
+APOPTOSIS	COAD	BIN1|274	-	SE	chr2:127808819-127815049:127815177-127816587	Observed	1.3229	-0.3793	56.25
+APOPTOSIS	COAD	PAK1|5058	-	SE	chr11:77091039-77103376:77103586-77122819	Observed	1.1628	0.2984	62.5
+APOPTOSIS	COAD	DAP3|7818	+	MX	chr1:155679615-155686797:155686919-155695173:155679615-155691308:155691409-155695173	Observed	1.001	0.2347	62.5
+APOPTOSIS	COAD	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	1.001	-0.0128	68.75
+APOPTOSIS	COAD	HTRA2|27429	+	A3	chr2:74757039-74757572:74757039-74757588	Observed	1.001	0.0118	56.25
+APOPTOSIS	COAD	RPAIN|84268	+	MX	chr17:5326149-5329291:5329402-5331391:5326149-5329556:5329619-5331391	Observed	1.001	-0.2116	56.25
+APOPTOSIS	COAD	RUNX2|860	+	SE	chr6:45480144-45512954:45513019-45514564	Observed	1.001	0.0846	56.25
+APOPTOSIS	COAD	SPHK2|56848	+	A5	chr19:49122946-49123659:49122800-49123659	Observed	0.9754	-0.1494	56.25
+APOPTOSIS	COAD	TERF1|7013	+	SE	chr8:73939287-73942571:73942630-73944277	Observed	0.7387	-0.3788	68.75
+APOPTOSIS	COAD	RPAIN|84268	+	MX	chr17:5326149-5329291:5329402-5335862:5326149-5329556:5329619-5335862	Observed	0.3556	-0.1919	62.5
+APOPTOSIS	COAD	XAF1|54739	+	A3	chr17:6661543-6662575:6661543-6662981	Observed	0.1059	-0.3913	75
