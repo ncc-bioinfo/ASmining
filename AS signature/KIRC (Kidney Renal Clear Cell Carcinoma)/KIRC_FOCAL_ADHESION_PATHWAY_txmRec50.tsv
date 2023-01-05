@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+FOCAL_ADHESION_PATHWAY	KIRC	COL16A1|1307	-	A5	chr1:32121103-32121699:32121103-32122001	Observed	5.4136	-0.5036	100
+FOCAL_ADHESION_PATHWAY	KIRC	COL16A1|1307	-	SE	chr1:32145286-32145405:32145452-32145643	Observed	2.9034	0.3065	75
+FOCAL_ADHESION_PATHWAY	KIRC	COL16A1|1307	-	SE	chr1:32134456-32136203:32136247-32137216	Observed	2.7666	0.3064	56.25
+FOCAL_ADHESION_PATHWAY	KIRC	PRPF4B|8899	+	A5	chr6:4060920-4061249:4060878-4061249	Observed	2.603	0.5533	81.25
+FOCAL_ADHESION_PATHWAY	KIRC	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	1.9181	-0.2575	75
+FOCAL_ADHESION_PATHWAY	KIRC	FN1|2335	-	MX	chr2:216230353-216232586:216232750-216236632:216230353-216235017:216235155-216236632	Observed	1.8431	0.2664	62.5
+FOCAL_ADHESION_PATHWAY	KIRC	CCDC88A|55704	-	A3	chr2:55555571-55559702:55555568-55559702	Observed	1.7731	-0.4583	68.75
+FOCAL_ADHESION_PATHWAY	KIRC	FN1|2335	-	SE	chr2:216236738-216236832:216237098-216238045	Observed	0.82	0.3537	56.25
