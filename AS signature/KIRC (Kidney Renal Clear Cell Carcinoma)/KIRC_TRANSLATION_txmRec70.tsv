@@ -1,0 +1,25 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+TRANSLATION	KIRC	MKNK2|2872	-	A3	chr19:2039855-2040133:2037828-2040133	Observed	2.4971	-0.4363	75
+TRANSLATION	KIRC	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	1.7436	-0.5207	81.25
+TRANSLATION	KIRC	FLII|2314	-	A3	chr17:18155130-18155313:18155127-18155313	Observed	1.6939	-0.4896	75
+TRANSLATION	KIRC	ILF3|3609	+	A3	chr19:10794646-10795092:10794646-10795535	Observed	1.5301	-0.4969	81.25
+TRANSLATION	KIRC	FBN1|2200	-	SE	chr15:48719970-48720079:48720140-48720543	Observed	1.334	0.2992	87.5
+TRANSLATION	KIRC	DMPK|1760	-	A3	chr19:46274318-46274608:46274314-46274608	Observed	1.1845	-0.2573	75
+TRANSLATION	KIRC	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.0005	-0.3605	81.25
+TRANSLATION	KIRC	SYNE1|23345	-	SE	chr6:152615262-152621776:152621916-152623004	Observed	0.9529	-0.2225	93.75
+TRANSLATION	KIRC	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	0.8923	0.3258	81.25
+TRANSLATION	KIRC	DHX9|1660	+	RI	chr1:182852274:182852351-182852455:182852503	Observed	0.7003	-0.452	81.25
+TRANSLATION	KIRC	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	0.3274	-0.4748	87.5
+TRANSLATION	KIRC	ELN|2006	+	SE	chr7:73471043-73471970:73472026-73474216	Observed	0.0458	-0.1793	75
