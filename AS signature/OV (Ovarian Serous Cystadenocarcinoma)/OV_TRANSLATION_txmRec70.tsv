@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+TRANSLATION	OV	FBN1|2200	-	SE	chr15:48719970-48720079:48720140-48720543	Observed	2.0371	0.5867	87.5
+TRANSLATION	OV	DHX9|1660	+	RI	chr1:182852274:182852351-182852455:182852503	Observed	1.9758	-0.6279	81.25
+TRANSLATION	OV	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	1.1932	0.5197	81.25
+TRANSLATION	OV	DMPK|1760	-	A3	chr19:46274318-46274608:46274314-46274608	Observed	1.001	-0.4459	75
+TRANSLATION	OV	ILF3|3609	+	A3	chr19:10794646-10795092:10794646-10795535	Observed	1.001	-0.4731	81.25
+TRANSLATION	OV	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.001	-0.2982	81.25
+TRANSLATION	OV	SYNE1|23345	-	SE	chr6:152615262-152621776:152621916-152623004	Observed	0.7888	-0.2459	93.75
+TRANSLATION	OV	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	0.1721	-0.4837	81.25
+TRANSLATION	OV	TRAPPC2|6399	-	SE	chrX:13738101-13752169:13752304-13752644	Observed	0.0805	-0.3091	75
+TRANSLATION	OV	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	0.0073	-0.3385	87.5
