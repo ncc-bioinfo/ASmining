@@ -1,0 +1,18 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPAIR_PATHWAY	OV	BIN1|274	-	SE	chr2:127808819-127815049:127815177-127816587	Observed	1.4127	-0.0273	56.25
+DNA_REPAIR_PATHWAY	OV	NFASC|23114	+	SE	chr1:204913534-204919685:204919702-204921139	Observed	1.0005	-0.1682	75
+DNA_REPAIR_PATHWAY	OV	XRCC3|7517	-	SE	chr14:104177904-104179212:104179305-104181761	Observed	1.0005	0.0085	68.75
+DNA_REPAIR_PATHWAY	OV	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	0.9158	-0.3136	56.25
+DNA_REPAIR_PATHWAY	OV	BCOR|54880	-	A5	chrX:39911653-39913091:39911653-39913139	Observed	0.323	0.4124	68.75

@@ -1,0 +1,25 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+ANGIOGENESIS	OV	SULF2|55959	-	SE	chr20:46287136-46288143:46288196-46288441	Observed	1.7877	0.4942	81.25
+ANGIOGENESIS	OV	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	1.2329	-0.4228	81.25
+ANGIOGENESIS	OV	TEK|7010	+	SE	chr9:27173360-27180238:27180366-27183457	Observed	1.1799	0.3713	87.5
+ANGIOGENESIS	OV	NFKB1|4790	+	RI	chr4:103537591:103538275-103538276:103538458	Observed	1.0526	-0.3258	68.75
+ANGIOGENESIS	OV	ERG|2078	-	SE	chr21:39764366-39772496:39772567-39774479	Observed	1.001	-0.0765	62.5
+ANGIOGENESIS	OV	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.001	0.3369	93.75
+ANGIOGENESIS	OV	PDGFC|56034	-	RI	chr4:157731989:157732020-157732105:157732169	Observed	1.001	0.3463	68.75
+ANGIOGENESIS	OV	PKD2|5311	+	SE	chr4:88977419-88979135:88979255-88983058	Observed	1.001	0.2407	75
+ANGIOGENESIS	OV	TG|7038	+	SE	chr8:133984986-133995595:133995657-134024146	Observed	1.001	0.0555	68.75
+ANGIOGENESIS	OV	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.001	0.2936	56.25
+ANGIOGENESIS	OV	SLIT2|9353	+	SE	chr4:20525800-20526772:20526795-20530572	Observed	0.8104	0.3619	68.75
+ANGIOGENESIS	OV	FN1|2335	-	SE	chr2:216236738-216236832:216237098-216238045	Observed	0.6795	0.2922	62.5

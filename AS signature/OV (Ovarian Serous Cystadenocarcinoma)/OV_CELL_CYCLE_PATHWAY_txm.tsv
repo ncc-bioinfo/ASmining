@@ -1,0 +1,27 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	OV	PCBP4|57060	-	A5	chr3:51993667-51993911:51993667-51994205	Observed	2.7932	-0.2338	37.5
+CELL_CYCLE_PATHWAY	OV	AURKA|6790	-	A5	chr20:54963258-54966999:54963258-54967210	Observed	2.6067	-0.1439	62.5
+CELL_CYCLE_PATHWAY	OV	BIN1|274	-	SE	chr2:127808819-127815049:127815177-127816587	Observed	2.1503	-0.1747	50
+CELL_CYCLE_PATHWAY	OV	TNNT2|7139	-	SE	chr1:201328383-201328751:201328791-201330407	Observed	2.1412	-0.3038	12.5
+CELL_CYCLE_PATHWAY	OV	FARP2|9855	+	A3	chr2:242403395-242404875:242403395-242405089	Observed	1.1552	-0.2136	56.25
+CELL_CYCLE_PATHWAY	OV	BRCA1|672	-	A5	chr17:41243049-41243452:41243049-41246761	Observed	1.0005	-0.0353	62.5
+CELL_CYCLE_PATHWAY	OV	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	1.0005	0.0602	56.25
+CELL_CYCLE_PATHWAY	OV	C2|717	+	MX	chr6:31901560-31901644:31901742-31905096:31901560-31903700:31903838-31905096	Observed	1.0005	-0.0491	68.75
+CELL_CYCLE_PATHWAY	OV	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	1.0005	-0.1452	68.75
+CELL_CYCLE_PATHWAY	OV	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	0.5933	0.2141	62.5
+CELL_CYCLE_PATHWAY	OV	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	0.5448	-0.0631	87.5
+CELL_CYCLE_PATHWAY	OV	AURKA|6790	-	SE	chr20:54963258-54963743:54963840-54965612	Observed	0.474	0.0454	56.25
+CELL_CYCLE_PATHWAY	OV	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967210	Observed	0.3815	-0.1161	56.25
+CELL_CYCLE_PATHWAY	OV	IFI27|3429	+	SE	chr14:94577143-94577971:94578119-94581197	Observed	0.0338	0.0263	56.25

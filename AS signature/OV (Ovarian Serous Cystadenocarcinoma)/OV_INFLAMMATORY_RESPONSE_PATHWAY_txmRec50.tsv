@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+INFLAMMATORY_RESPONSE_PATHWAY	OV	PTK2B|2185	+	SE	chr8:27301788-27303311:27303436-27308266	Observed	5.8312	-0.5556	100
+INFLAMMATORY_RESPONSE_PATHWAY	OV	ITGAM|3684	+	SE	chr16:31308975-31309063:31309275-31332562	Observed	1.9715	0.2594	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	OV	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.4156	-0.0403	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	OV	IL32|9235	+	A5	chr16:3115711-3115785:3115688-3115785	Observed	1.1421	0.2222	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	OV	CASP1|834	-	SE	chr11:104902007-104903791:104903853-104904935	Observed	1.0005	0.0971	56.25
+INFLAMMATORY_RESPONSE_PATHWAY	OV	MYD88|4615	+	A3	chr3:38180519-38181355:38180519-38181879	Observed	1.0005	-0.0315	56.25
+INFLAMMATORY_RESPONSE_PATHWAY	OV	CD40|958	+	SE	chr20:44751858-44755279:44755380-44756777	Observed	0.6224	0.1976	56.25

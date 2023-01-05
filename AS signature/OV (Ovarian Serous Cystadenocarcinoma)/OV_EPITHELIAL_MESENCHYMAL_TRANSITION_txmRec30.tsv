@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	OV	RAC1|5879	+	SE	chr7:6431672-6438293:6438349-6439757	Observed	2.1301	-0.2575	50
+EPITHELIAL_MESENCHYMAL_TRANSITION	OV	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	1.7303	0.3976	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	OV	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	1.6426	-0.3295	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	OV	MUC1|4582	-	A3	chr1:155162074-155162577:155162038-155162577	Observed	1.3289	0.0109	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	OV	CLK2|1196	-	SE	chr1:155238150-155238499:155238583-155239279	Observed	1.001	0.1311	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	OV	ZEB1|6935	+	A3	chr10:31750166-31784705:31750166-31784708	Observed	1.001	0.4267	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	OV	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	0.9841	-0.4101	81.25
