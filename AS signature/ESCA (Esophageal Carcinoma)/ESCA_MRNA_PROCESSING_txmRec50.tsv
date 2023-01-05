@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	ESCA	CTSB|1508	-	A5	chr8:11710988-11718870:11710988-11718915	Observed	1.5478	0.1139	68.75
+MRNA_PROCESSING	ESCA	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	1.4156	-0.2542	62.5
+MRNA_PROCESSING	ESCA	OPA1|4976	+	SE	chr3:193336725-193343881:193343991-193349401	Observed	1.4146	-0.1775	62.5
+MRNA_PROCESSING	ESCA	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.0605	-0.3231	68.75
+MRNA_PROCESSING	ESCA	FGFR1|2260	-	A5	chr8:38285611-38285864:38285611-38285870	Observed	1.0005	0.0112	56.25
+MRNA_PROCESSING	ESCA	NUMA1|4926	-	RI	chr11:71718235:71718481-71719734:71719891	Observed	1.0005	0.0035	56.25
+MRNA_PROCESSING	ESCA	PQBP1|10084	+	A5	chrX:48755365-48755775:48755297-48755775	Observed	1.0005	-0.1892	56.25
+MRNA_PROCESSING	ESCA	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	1.0005	-0.2143	62.5
+MRNA_PROCESSING	ESCA	NUP62|23636	-	A3	chr19:50431105-50432583:50431072-50432583	Observed	0.5143	0.2559	56.25
+MRNA_PROCESSING	ESCA	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	0.2324	0.2716	68.75

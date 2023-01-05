@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+PROTEIN_LOCALIZATION	ESCA	CCDC88A|55704	-	A3	chr2:55555571-55559702:55555568-55559702	Observed	2.4213	0.3236	62.5
+PROTEIN_LOCALIZATION	ESCA	CCDC88A|55704	-	SE	chr2:55528413-55529008:55529208-55535945	Observed	1.8316	-0.3599	87.5
+PROTEIN_LOCALIZATION	ESCA	SYNE1|23345	-	SE	chr6:152464900-152466622:152466690-152469180	Observed	1.7339	0.151	62.5
+PROTEIN_LOCALIZATION	ESCA	SYNE1|23345	-	A3	chr6:152605319-152614723:152605307-152614723	Observed	1.4019	0.3431	56.25
+PROTEIN_LOCALIZATION	ESCA	DLG1|1739	-	SE	chr3:196869639-196876614:196876667-196921296	Observed	1.0005	-0.2309	68.75
+PROTEIN_LOCALIZATION	ESCA	DMD|1756	-	SE	chrX:31140047-31144759:31144790-31152219	Observed	1.0005	-0.2447	56.25
+PROTEIN_LOCALIZATION	ESCA	DMD|1756	-	SE	chrX:31191721-31196049:31196087-31196786	Observed	1.0005	-0.0717	62.5
+PROTEIN_LOCALIZATION	ESCA	NF1|4763	+	SE	chr17:29687721-29694243:29694296-29701031	Observed	1.0005	0.1947	56.25
+PROTEIN_LOCALIZATION	ESCA	SYNE1|23345	-	SE	chr6:152615262-152621776:152621916-152623004	Observed	0.1182	-0.3431	62.5

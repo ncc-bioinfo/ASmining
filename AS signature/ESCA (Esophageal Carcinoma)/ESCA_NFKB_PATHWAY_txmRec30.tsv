@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+NFKB_PATHWAY	ESCA	CARD14|79092	+	A5	chr17:78178150-78178834:78178140-78178834	Observed	1.7345	0.0167	37.5
+NFKB_PATHWAY	ESCA	NFASC|23114	+	SE	chr1:204913534-204919685:204919702-204921139	Observed	1.4156	-0.0117	56.25
+NFKB_PATHWAY	ESCA	ABCC1|4363	+	SE	chr16:16173335-16177223:16177399-16184262	Observed	1.3165	0.1433	56.25
+NFKB_PATHWAY	ESCA	IKBKG|8517	+	A5	chrX:153790003-153791025:153789999-153791025	Observed	1.1146	-0.0075	56.25
+NFKB_PATHWAY	ESCA	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	1.1118	0.1855	56.25
+NFKB_PATHWAY	ESCA	PTPRC|5788	+	SE	chr1:198668833-198671516:198671659-198672427	Observed	1.0005	0.0558	62.5
+NFKB_PATHWAY	ESCA	PLAU|5328	+	A5	chr10:75670980-75671283:75670976-75671283	Observed	0.4896	-0.1416	75
+NFKB_PATHWAY	ESCA	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	0.1269	-0.038	68.75
