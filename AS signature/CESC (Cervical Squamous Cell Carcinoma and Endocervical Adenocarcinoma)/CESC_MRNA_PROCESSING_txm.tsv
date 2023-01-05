@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	CESC	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	2.1668	-0.301	62.5
+MRNA_PROCESSING	CESC	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.1868	-0.2173	68.75
+MRNA_PROCESSING	CESC	CTSB|1508	-	A5	chr8:11710988-11718870:11710988-11718915	Observed	1.0005	-0.0521	68.75
+MRNA_PROCESSING	CESC	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	1.0005	0.153	68.75
+MRNA_PROCESSING	CESC	INSR|3643	-	SE	chr19:7143101-7150508:7150543-7152737	Observed	1.0005	-0.1294	62.5
+MRNA_PROCESSING	CESC	NUMA1|4926	-	SE	chr11:71721900-71723447:71723488-71723941	Observed	1.0005	-0.1379	56.25
+MRNA_PROCESSING	CESC	PRPF4|9128	+	A3	chr9:116038050-116038825:116038050-116038828	Observed	1.0005	0.0803	56.25
+MRNA_PROCESSING	CESC	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	0.9396	-0.1748	56.25
+MRNA_PROCESSING	CESC	NUP62|23636	-	A3	chr19:50431105-50432583:50431072-50432583	Observed	0.0348	0.0786	56.25

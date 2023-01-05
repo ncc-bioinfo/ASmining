@@ -1,0 +1,28 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	CESC	UPF3B|65109	-	SE	chrX:118972490-118974609:118974647-118975039	Observed	2.1901	0.0516	31.25
+SPLICEOSOME	CESC	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	2.0812	-0.4928	62.5
+SPLICEOSOME	CESC	PINX1|54984	-	SE	chr8:10623426-10677703:10677779-10683662	Observed	1.9447	-0.1167	43.75
+SPLICEOSOME	CESC	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.6718	-0.4488	68.75
+SPLICEOSOME	CESC	DIS3|22894	-	MX	chr13:73352518-73354984:73355141-73355743:73352518-73355427:73355494-73355743	Observed	1.4156	-0.0877	56.25
+SPLICEOSOME	CESC	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.4156	-0.402	75
+SPLICEOSOME	CESC	MCL1|4170	-	RI	chr1:150547037:150548887-150548888:150549967	Observed	1.3983	0.3666	56.25
+SPLICEOSOME	CESC	NT5E|4907	+	SE	chr6:86199317-86200226:86200375-86201695	Observed	1.3903	-0.2974	56.25
+SPLICEOSOME	CESC	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.149	-0.4295	62.5
+SPLICEOSOME	CESC	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	1.0005	0.3471	56.25
+SPLICEOSOME	CESC	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.0005	-0.3524	87.5
+SPLICEOSOME	CESC	USP15|9958	+	SE	chr12:62719714-62743002:62743088-62749112	Observed	0.8917	-0.2971	56.25
+SPLICEOSOME	CESC	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	0.6363	-0.3509	75
+SPLICEOSOME	CESC	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	0.2959	-0.2413	62.5
+SPLICEOSOME	CESC	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	0.0862	-0.4174	75
