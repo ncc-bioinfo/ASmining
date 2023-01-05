@@ -1,0 +1,25 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+COMPLEMENT_PATHWAY	LIHC	HNF4A|3172	+	A5	chr20:43057127-43058163:43057097-43058163	Observed	4.3624	-0.5095	6.25
+COMPLEMENT_PATHWAY	LIHC	DNMT3B|1789	+	SE	chr20:31390276-31393144:31393213-31395568	Observed	2.419	0.2464	37.5
+COMPLEMENT_PATHWAY	LIHC	FN1|2335	-	SE	chr2:216236738-216236832:216237023-216238045	Observed	2.1145	-0.1543	25
+COMPLEMENT_PATHWAY	LIHC	NCOR2|9612	-	A5	chr12:124810916-124811955:124810916-124812093	Observed	1.4156	0.0536	56.25
+COMPLEMENT_PATHWAY	LIHC	DYSF|8291	+	SE	chr2:71766369-71776480:71776521-71778171	Observed	1.2468	0.0863	62.5
+COMPLEMENT_PATHWAY	LIHC	CIITA|4261	+	A3	chr16:10992589-10992779:10992589-10992782	Observed	1.0005	-0.1291	68.75
+COMPLEMENT_PATHWAY	LIHC	FCGR2A|2212	+	A3	chr1:161475797-161476124:161475797-161476127	Observed	1.0005	0.0456	68.75
+COMPLEMENT_PATHWAY	LIHC	GATA3|2625	+	A3	chr10:8100804-8105956:8100804-8105959	Observed	1.0005	-0.0941	56.25
+COMPLEMENT_PATHWAY	LIHC	LTA|4049	+	A3	chr6:31540810-31541058:31540810-31541302	Observed	1.0005	0.0486	62.5
+COMPLEMENT_PATHWAY	LIHC	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	1.0005	-0.22	56.25
+COMPLEMENT_PATHWAY	LIHC	CFD|1675	+	A5	chr19:859765-860617:859744-860617	Observed	0.6863	-0.0908	68.75
+COMPLEMENT_PATHWAY	LIHC	CLK1|1195	-	RI	chr2:201724403:201724469-201725961:201726189	Observed	0.0226	-0.0464	56.25

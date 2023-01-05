@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+BASEMENT_MEMBRANE	LIHC	ELN|2006	+	SE	chr7:73471043-73471970:73472026-73474216	Observed	4.5366	0.5042	75
+BASEMENT_MEMBRANE	LIHC	ELN|2006	+	SE	chr7:73480062-73480274:73480327-73481062	Observed	2.4926	0.3974	62.5
+BASEMENT_MEMBRANE	LIHC	ELN|2006	+	SE	chr7:73461097-73462005:73462046-73462472	Observed	2.2394	0.2563	68.75
+BASEMENT_MEMBRANE	LIHC	FGFR2|2263	-	RI	chr10:123263304:123263453-123263454:123263455	Observed	2.1609	-0.3537	43.75
+BASEMENT_MEMBRANE	LIHC	ELN|2006	+	SE	chr7:73449744-73450885:73450914-73452037	Observed	2.126	-0.2772	56.25
+BASEMENT_MEMBRANE	LIHC	FN1|2335	-	SE	chr2:216236738-216236832:216237098-216238045	Observed	1.001	-0.1081	68.75
+BASEMENT_MEMBRANE	LIHC	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	0.8577	-0.1797	56.25
+BASEMENT_MEMBRANE	LIHC	FN1|2335	-	SE	chr2:216236738-216236832:216237023-216238045	Observed	0.4559	0.0361	56.25

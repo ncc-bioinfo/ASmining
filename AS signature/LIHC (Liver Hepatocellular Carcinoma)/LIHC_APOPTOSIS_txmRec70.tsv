@@ -1,0 +1,19 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+APOPTOSIS	LIHC	IL32|9235	+	SE	chr16:3115495-3115622:3115688-3115785	Observed	4.2292	0.4832	93.75
+APOPTOSIS	LIHC	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	4.0074	0.4522	93.75
+APOPTOSIS	LIHC	CD247|919	-	A3	chr1:167404671-167407807:167404668-167407807	Observed	2.4434	0.2917	81.25
+APOPTOSIS	LIHC	TRPM2|7226	+	SE	chr21:45846619-45846893:45846994-45855014	Observed	1.474	0.2032	75
+APOPTOSIS	LIHC	IL2RA|3559	-	SE	chr10:6061904-6063441:6063656-6066207	Observed	1.1637	0.1015	75
+APOPTOSIS	LIHC	XAF1|54739	+	A3	chr17:6661543-6662575:6661543-6662981	Observed	1.001	-0.095	75

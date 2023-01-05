@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPLICATION_PATHWAY	LIHC	CHEK1|1111	+	SE	chr11:125496728-125497502:125497725-125499127	Observed	3.3095	0.4578	62.5
+DNA_REPLICATION_PATHWAY	LIHC	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	2.359	0.1388	62.5
+DNA_REPLICATION_PATHWAY	LIHC	NF1|4763	+	SE	chr17:29490394-29496909:29497015-29508440	Observed	1.9424	-0.1807	62.5
+DNA_REPLICATION_PATHWAY	LIHC	ARHGEF15|22899	+	SE	chr17:8215958-8216240:8216572-8216819	Observed	1.4792	-0.1638	56.25
+DNA_REPLICATION_PATHWAY	LIHC	SMC2|10592	+	A5	chr9:106856767-106857605:106856758-106857605	Observed	1.0005	0.0807	56.25
+DNA_REPLICATION_PATHWAY	LIHC	STAU2|27067	-	SE	chr8:74334937-74439926:74440039-74464247	Observed	1.0005	0.0397	62.5
+DNA_REPLICATION_PATHWAY	LIHC	CDC7|8317	+	SE	chr1:91981433-91985687:91985836-91989598	Observed	0.3632	0.1237	56.25
+DNA_REPLICATION_PATHWAY	LIHC	PRKDC|5591	-	SE	chr8:48691654-48694723:48694815-48694939	Observed	0.0594	-0.0574	62.5
