@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+PROTEASOME_DEGRADATION	HNSC	USP19|10869	-	A3	chr3:49155263-49155380:49155218-49155380	Observed	2.3505	-0.5239	68.75
+PROTEASOME_DEGRADATION	HNSC	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	1.742	-0.603	100
+PROTEASOME_DEGRADATION	HNSC	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.5361	-0.5349	56.25
+PROTEASOME_DEGRADATION	HNSC	NFKB1|4790	+	A3	chr4:103451071-103455002:103451071-103455005	Observed	1.3966	-0.4296	56.25
+PROTEASOME_DEGRADATION	HNSC	NF2|4771	+	RI	chr22:30079009:30079053-30079690:30079903	Observed	1.0005	-0.3661	75
+PROTEASOME_DEGRADATION	HNSC	USP19|10869	-	SE	chr3:49154376-49154492:49154794-49154870	Observed	1.0005	-0.4813	62.5
+PROTEASOME_DEGRADATION	HNSC	BCKDHB|594	+	RI	chr6:81053381:81053529-81055692:81055987	Observed	0.8805	-0.3535	68.75
+PROTEASOME_DEGRADATION	HNSC	FBXO11|80204	-	SE	chr2:48046217-48047501:48047595-48049357	Observed	0.6369	-0.5492	62.5

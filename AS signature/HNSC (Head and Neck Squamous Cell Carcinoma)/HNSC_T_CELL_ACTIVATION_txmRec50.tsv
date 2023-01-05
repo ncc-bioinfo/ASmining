@@ -1,0 +1,30 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	HNSC	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	4.1552	0.522	87.5
+T_CELL_ACTIVATION	HNSC	PTPRC|5788	+	SE	chr1:198668833-198671516:198671659-198672427	Observed	2.6998	0.205	81.25
+T_CELL_ACTIVATION	HNSC	CD28|940	+	RI	chr2:204591356:204591421-204591674:204591712	Observed	1.7025	0.1216	75
+T_CELL_ACTIVATION	HNSC	CD6|923	+	SE	chr11:60781486-60783185:60783307-60784951	Observed	1.6769	0.0543	56.25
+T_CELL_ACTIVATION	HNSC	FASLG|356	+	SE	chr1:172628689-172629235:172629280-172633474	Observed	1.3856	0.2708	56.25
+T_CELL_ACTIVATION	HNSC	FYN|2534	-	SE	chr6:112017659-112020718:112020873-112024088	Observed	1.366	0.2641	87.5
+T_CELL_ACTIVATION	HNSC	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.355	-0.2457	62.5
+T_CELL_ACTIVATION	HNSC	PTPRC|5788	+	SE	chr1:198661502-198665841:198666038-198668693	Observed	1.2935	-0.0232	87.5
+T_CELL_ACTIVATION	HNSC	CD6|923	+	SE	chr11:60785485-60785761:60785865-60786726	Observed	1.2083	0.1389	87.5
+T_CELL_ACTIVATION	HNSC	CD28|940	+	SE	chr2:204571471-204591356:204591712-204594371	Observed	1.001	0.1522	81.25
+T_CELL_ACTIVATION	HNSC	CD28|940	+	SE	chr2:204591712-204594371:204594495-204599507	Observed	1.001	0.2568	87.5
+T_CELL_ACTIVATION	HNSC	CD46|4179	+	SE	chr1:207940540-207941124:207941168-207943666	Observed	1.001	0.1665	56.25
+T_CELL_ACTIVATION	HNSC	IL2RA|3559	-	SE	chr10:6061904-6063441:6063656-6066207	Observed	1.001	-0.1003	87.5
+T_CELL_ACTIVATION	HNSC	PDCD1|5133	-	A5	chr2:242794505-242794773:242794505-242795009	Observed	1.001	0.0163	62.5
+T_CELL_ACTIVATION	HNSC	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	1.001	0.2311	81.25
+T_CELL_ACTIVATION	HNSC	PDCD1|5133	-	SE	chr2:242794135-242794350:242794505-242794773	Observed	0.377	0.1876	81.25
+T_CELL_ACTIVATION	HNSC	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	0.0575	-0.0143	62.5

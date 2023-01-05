@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MYOGENESIS_PATHWAY	HNSC	BIN1|274	-	SE	chr2:127816731-127818172:127818216-127819691	Observed	6.4041	0.5135	6.25
+MYOGENESIS_PATHWAY	HNSC	MEF2C|4208	-	MX	chr5:88047860-88056805:88056942-88100415:88047860-88057002:88057145-88100415	Observed	3.9606	0.5338	6.25
+MYOGENESIS_PATHWAY	HNSC	ACHE|43	-	A3	chr7:100488709-100488790:100487956-100488790	Observed	3.5543	-0.4704	37.5
+MYOGENESIS_PATHWAY	HNSC	CAST|831	+	SE	chr5:96058402-96062498:96062563-96063193	Observed	2.8157	0.3653	50
+MYOGENESIS_PATHWAY	HNSC	FLNC|2318	+	SE	chr7:128489632-128490030:128490128-128490438	Observed	2.6527	-0.1784	37.5
+MYOGENESIS_PATHWAY	HNSC	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	1.9991	-0.0016	62.5
+MYOGENESIS_PATHWAY	HNSC	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	1.9099	-0.446	75
+MYOGENESIS_PATHWAY	HNSC	ADAM12|8038	-	A5	chr10:127824229-127843787:127824229-127843796	Observed	1.3119	0.2176	75
+MYOGENESIS_PATHWAY	HNSC	MEF2C|4208	-	A3	chr5:88119747-88178772:88119744-88178772	Observed	0.6966	0.1632	68.75
+MYOGENESIS_PATHWAY	HNSC	FGFR1|2260	-	SE	chr8:38287466-38297824:38297891-38314874	Observed	0.4567	0.0409	62.5

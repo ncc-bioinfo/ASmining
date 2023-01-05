@@ -1,0 +1,29 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	HNSC	ZMYND11|10771	+	SE	chr10:255988-267135:267296-282778	Observed	2.5554	-0.3269	18.75
+MRNA_PROCESSING	HNSC	ITGB2|3689	-	SE	chr21:46321648-46323280:46323450-46326830	Observed	2.3784	-0.319	37.5
+MRNA_PROCESSING	HNSC	DMD|1756	-	SE	chrX:31140047-31144759:31144790-31152219	Observed	2.2845	-0.2404	43.75
+MRNA_PROCESSING	HNSC	SCN5A|6331	-	MX	chr3:38651455-38655234:38655325-38662334:38651455-38655466:38655557-38662334	Observed	2.1433	-0.2591	18.75
+MRNA_PROCESSING	HNSC	NUP62|23636	-	A3	chr19:50431105-50432583:50431072-50432583	Observed	2.0032	0.1694	56.25
+MRNA_PROCESSING	HNSC	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	1.6209	0.04	62.5
+MRNA_PROCESSING	HNSC	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	1.5228	0.2942	68.75
+MRNA_PROCESSING	HNSC	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	1.3977	-0.3315	62.5
+MRNA_PROCESSING	HNSC	OPA1|4976	+	SE	chr3:193336725-193343881:193343991-193349401	Observed	1.3795	-0.0193	62.5
+MRNA_PROCESSING	HNSC	CTSB|1508	-	A5	chr8:11710988-11718870:11710988-11718915	Observed	1.2648	0.0134	68.75
+MRNA_PROCESSING	HNSC	INSR|3643	-	SE	chr19:7143101-7150508:7150543-7152737	Observed	1.2541	-0.1964	62.5
+MRNA_PROCESSING	HNSC	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.0005	-0.3705	68.75
+MRNA_PROCESSING	HNSC	NUMA1|4926	-	RI	chr11:71718235:71718481-71719734:71719891	Observed	0.9678	0.2934	56.25
+MRNA_PROCESSING	HNSC	NUMA1|4926	-	SE	chr11:71721900-71723447:71723488-71723941	Observed	0.7145	-0.2291	56.25
+MRNA_PROCESSING	HNSC	FGFR1|2260	-	A5	chr8:38285611-38285864:38285611-38285870	Observed	0.5648	-0.0088	56.25
+MRNA_PROCESSING	HNSC	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	0.0416	-0.0634	56.25

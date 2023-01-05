@@ -1,0 +1,31 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	HNSC	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	2.2807	-0.5429	62.5
+SPLICEOSOME	HNSC	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	1.9751	-0.3915	50
+SPLICEOSOME	HNSC	DIS3|22894	-	SE	chr13:73355141-73355427:73355494-73355743	Observed	1.965	-0.4618	37.5
+SPLICEOSOME	HNSC	RRM1|6240	+	A5	chr11:4141200-4142834:4141158-4142834	Observed	1.8799	0.474	37.5
+SPLICEOSOME	HNSC	NT5E|4907	+	SE	chr6:86199317-86200226:86200375-86201695	Observed	1.6486	-0.3855	56.25
+SPLICEOSOME	HNSC	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	1.4159	-0.4413	75
+SPLICEOSOME	HNSC	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.234	-0.4738	75
+SPLICEOSOME	HNSC	ANO1|55107	+	RI	chr11:70033844:70035001-70035002:70035649	Observed	1.141	0.4792	62.5
+SPLICEOSOME	HNSC	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	1.001	-0.1163	62.5
+SPLICEOSOME	HNSC	ANXA6|309	-	SE	chr5:150489407-150490188:150490205-150496688	Observed	1.001	-0.1724	68.75
+SPLICEOSOME	HNSC	DIS3|22894	-	MX	chr13:73352518-73354984:73355141-73355743:73352518-73355427:73355494-73355743	Observed	1.001	0.1309	56.25
+SPLICEOSOME	HNSC	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.001	-0.3755	87.5
+SPLICEOSOME	HNSC	EIF4G3|8672	-	SE	chr1:21268823-21276496:21276601-21295967	Observed	1.001	-0.5171	62.5
+SPLICEOSOME	HNSC	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	1.001	-0.0196	56.25
+SPLICEOSOME	HNSC	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.001	-0.4809	68.75
+SPLICEOSOME	HNSC	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	0.9815	0.5096	56.25
+SPLICEOSOME	HNSC	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	0.7607	-0.5264	62.5
+SPLICEOSOME	HNSC	MCL1|4170	-	RI	chr1:150547037:150548887-150548888:150549967	Observed	0.4533	0.2045	56.25
