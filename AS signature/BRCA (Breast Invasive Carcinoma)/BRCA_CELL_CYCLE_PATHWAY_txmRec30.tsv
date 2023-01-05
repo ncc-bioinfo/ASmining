@@ -1,0 +1,26 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	BRCA	RCC1|1104	+	SE	chr1:28856451-28857035:28857085-28858315	Observed	7.4501	-0.4774	50
+CELL_CYCLE_PATHWAY	BRCA	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	3.2445	-0.1375	68.75
+CELL_CYCLE_PATHWAY	BRCA	MYBL2|4605	+	SE	chr20:42302539-42310424:42310495-42311434	Observed	3.226	0.0663	62.5
+CELL_CYCLE_PATHWAY	BRCA	AURKA|6790	-	SE	chr20:54963258-54963743:54963840-54965612	Observed	3.1014	0.1017	56.25
+CELL_CYCLE_PATHWAY	BRCA	AURKA|6790	-	A5	chr20:54963258-54966999:54963258-54967210	Observed	2.9854	0.0217	62.5
+CELL_CYCLE_PATHWAY	BRCA	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	2.7892	0.0386	87.5
+CELL_CYCLE_PATHWAY	BRCA	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	2.5499	0.1817	62.5
+CELL_CYCLE_PATHWAY	BRCA	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967210	Observed	2.403	-0.0264	56.25
+CELL_CYCLE_PATHWAY	BRCA	FARP2|9855	+	A3	chr2:242403395-242404875:242403395-242405089	Observed	1.803	-0.2988	56.25
+CELL_CYCLE_PATHWAY	BRCA	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	1.7346	0.0589	56.25
+CELL_CYCLE_PATHWAY	BRCA	BRCA1|672	-	A5	chr17:41243049-41243452:41243049-41246761	Observed	1.0005	-0.0936	62.5
+CELL_CYCLE_PATHWAY	BRCA	BRCA1|672	-	A3	chr17:41251897-41256139:41251894-41256139	Observed	0.9134	-0.1154	56.25
+CELL_CYCLE_PATHWAY	BRCA	AURKA|6790	-	SE	chr20:54963258-54965612:54965721-54967224	Observed	0.3076	0.1652	56.25

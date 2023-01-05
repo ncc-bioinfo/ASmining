@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+ANGIOGENESIS	BRCA	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	4.6112	-0.5954	81.25
+ANGIOGENESIS	BRCA	VCAN|1462	+	SE	chr5:82808215-82832826:82838087-82841356	Observed	3.9656	0.5972	81.25
+ANGIOGENESIS	BRCA	TPM1|7168	+	MX	chr15:63353138-63353397:63353472-63354414:63353138-63353912:63353987-63354414	Observed	3.4852	-0.3158	75
+ANGIOGENESIS	BRCA	PKD2|5311	+	SE	chr4:88977419-88979135:88979255-88983058	Observed	3.2938	0.5704	75
+ANGIOGENESIS	BRCA	HSPG2|3339	-	A3	chr1:22211170-22211260:22211167-22211260	Observed	2.4422	0.1974	81.25
+ANGIOGENESIS	BRCA	SULF2|55959	-	SE	chr20:46287136-46288143:46288196-46288441	Observed	2.3116	0.4342	81.25
+ANGIOGENESIS	BRCA	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	2.1799	0.3794	93.75
+ANGIOGENESIS	BRCA	TEK|7010	+	SE	chr9:27173360-27180238:27180366-27183457	Observed	1.9524	0.4384	87.5
+ANGIOGENESIS	BRCA	TEK|7010	+	A5	chr9:27205063-27206580:27205060-27206580	Observed	1.4751	0.4229	87.5
+ANGIOGENESIS	BRCA	ERG|2078	-	SE	chr21:39795483-39817327:39817544-39947586	Observed	1.3142	0.3677	75
+ANGIOGENESIS	BRCA	TIE1|7075	+	SE	chr1:43773243-43773467:43773595-43774657	Observed	1.0222	0.4262	81.25
