@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+PROTEIN_LOCALIZATION	PRAD	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	1.9083	0.4243	68.75
+PROTEIN_LOCALIZATION	PRAD	CCDC88A|55704	-	SE	chr2:55528413-55529008:55529208-55535945	Observed	1.4761	-0.4527	87.5
+PROTEIN_LOCALIZATION	PRAD	CCDC88A|55704	-	SE	chr2:55523659-55526975:55527055-55528342	Observed	1.4145	-0.416	87.5
+PROTEIN_LOCALIZATION	PRAD	DLG1|1739	-	SE	chr3:196869639-196876614:196876667-196921296	Observed	1.1476	-0.5149	68.75
+PROTEIN_LOCALIZATION	PRAD	POMT1|10585	+	RI	chr9:134385290:134385449-134385647:134385802	Observed	1.0549	-0.1691	56.25
+PROTEIN_LOCALIZATION	PRAD	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	1.0005	-0.4726	56.25
+PROTEIN_LOCALIZATION	PRAD	SYNE1|23345	-	SE	chr6:152464900-152466622:152466690-152469180	Observed	1.0005	0.2075	62.5
+PROTEIN_LOCALIZATION	PRAD	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	0.9639	0.462	75
+PROTEIN_LOCALIZATION	PRAD	CCDC88A|55704	-	A3	chr2:55555571-55559702:55555568-55559702	Observed	0.6255	0.4457	62.5
+PROTEIN_LOCALIZATION	PRAD	DMD|1756	-	SE	chrX:31191721-31196049:31196087-31196786	Observed	0.285	-0.1674	62.5
+PROTEIN_LOCALIZATION	PRAD	LEF1|51176	-	SE	chr4:109000770-109002742:109002825-109004512	Observed	0.013	-0.2063	62.5

@@ -1,0 +1,30 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	PRAD	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	2.7213	-0.309	50
+SPLICEOSOME	PRAD	EIF4G3|8672	-	SE	chr1:21268823-21276496:21276601-21295967	Observed	2.2408	-0.5277	62.5
+SPLICEOSOME	PRAD	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	2.0864	-0.5281	62.5
+SPLICEOSOME	PRAD	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.8843	-0.4729	75
+SPLICEOSOME	PRAD	ANO1|55107	+	RI	chr11:70033844:70035001-70035002:70035649	Observed	1.8707	0.4799	62.5
+SPLICEOSOME	PRAD	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.3781	-0.4794	87.5
+SPLICEOSOME	PRAD	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	1.3326	-0.3599	75
+SPLICEOSOME	PRAD	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	1.2934	-0.3939	75
+SPLICEOSOME	PRAD	ANXA6|309	-	SE	chr5:150489407-150490188:150490205-150496688	Observed	1.2534	-0.1257	68.75
+SPLICEOSOME	PRAD	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.112	-0.4763	62.5
+SPLICEOSOME	PRAD	SMARCA1|6594	-	SE	chrX:128626070-128627017:128627052-128630727	Observed	1.0635	-0.0855	56.25
+SPLICEOSOME	PRAD	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.0243	-0.4342	68.75
+SPLICEOSOME	PRAD	DIS3|22894	-	MX	chr13:73352518-73354984:73355141-73355743:73352518-73355427:73355494-73355743	Observed	1.0005	-0.007	56.25
+SPLICEOSOME	PRAD	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	1.0005	-0.1132	56.25
+SPLICEOSOME	PRAD	MCL1|4170	-	RI	chr1:150547037:150548887-150548888:150549967	Observed	1.0005	0.1324	56.25
+SPLICEOSOME	PRAD	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	0.4642	0.3956	56.25
+SPLICEOSOME	PRAD	USP15|9958	+	SE	chr12:62719714-62743002:62743088-62749112	Observed	0.0667	-0.3189	56.25
