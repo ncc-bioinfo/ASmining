@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPLICATION_PATHWAY	SKCM	CHEK1|1111	+	A5	chr11:125496537-125496644:125496470-125496644	Observed	3.5485	-0.2909	56.25
+DNA_REPLICATION_PATHWAY	SKCM	CHEK1|1111	+	SE	chr11:125496728-125497502:125497725-125499127	Observed	3.456	0.333	62.5
+DNA_REPLICATION_PATHWAY	SKCM	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	2.2258	0.1376	50
+DNA_REPLICATION_PATHWAY	SKCM	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	1.8925	-0.0592	62.5
+DNA_REPLICATION_PATHWAY	SKCM	NF1|4763	+	SE	chr17:29490394-29496909:29497015-29508440	Observed	1.4024	-0.1912	62.5
+DNA_REPLICATION_PATHWAY	SKCM	CDC7|8317	+	SE	chr1:91981433-91985687:91985836-91989598	Observed	1.3857	0.0911	56.25
+DNA_REPLICATION_PATHWAY	SKCM	ARHGEF15|22899	+	SE	chr17:8215958-8216240:8216572-8216819	Observed	1.0005	-0.0444	56.25
+DNA_REPLICATION_PATHWAY	SKCM	STAU2|27067	-	SE	chr8:74334937-74439926:74440039-74464247	Observed	1.0005	0.1056	62.5
+DNA_REPLICATION_PATHWAY	SKCM	PRKDC|5591	-	SE	chr8:48691654-48694723:48694815-48694939	Observed	0.6424	0.2221	62.5

@@ -1,0 +1,27 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	SKCM	BRCA1|672	-	A3	chr17:41228631-41234421:41228628-41234421	Observed	3.6706	-0.336	50
+CELL_CYCLE_PATHWAY	SKCM	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	3.131	0.0939	87.5
+CELL_CYCLE_PATHWAY	SKCM	AURKA|6790	-	A5	chr20:54963840-54967210:54963840-54967224	Observed	2.9317	0.2766	12.5
+CELL_CYCLE_PATHWAY	SKCM	AURKA|6790	-	SE	chr20:54963258-54963743:54963840-54965612	Observed	2.3546	0.1358	56.25
+CELL_CYCLE_PATHWAY	SKCM	FARP2|9855	+	A3	chr2:242403395-242404875:242403395-242405089	Observed	2.2116	-0.3195	56.25
+CELL_CYCLE_PATHWAY	SKCM	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	1.9875	0.2309	62.5
+CELL_CYCLE_PATHWAY	SKCM	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	1.7665	0.1976	56.25
+CELL_CYCLE_PATHWAY	SKCM	AURKA|6790	-	A5	chr20:54963258-54966999:54963258-54967210	Observed	1.217	-0.106	62.5
+CELL_CYCLE_PATHWAY	SKCM	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	0.717	0.211	62.5
+CELL_CYCLE_PATHWAY	SKCM	ATM|472	+	SE	chr11:108093913-108095511:108095598-108098322	Observed	0.6559	0.139	56.25
+CELL_CYCLE_PATHWAY	SKCM	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	0.6334	-0.0029	68.75
+CELL_CYCLE_PATHWAY	SKCM	MYBL2|4605	+	SE	chr20:42302539-42310424:42310495-42311434	Observed	0.5379	-0.0049	62.5
+CELL_CYCLE_PATHWAY	SKCM	IFI27|3429	+	SE	chr14:94577143-94577971:94578119-94581197	Observed	0.38	0.0249	56.25
+CELL_CYCLE_PATHWAY	SKCM	BRCA1|672	-	A5	chr17:41243049-41243452:41243049-41246761	Observed	0.1413	-0.064	62.5

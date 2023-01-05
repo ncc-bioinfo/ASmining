@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPAIR_PATHWAY	SKCM	XRCC3|7517	-	SE	chr14:104177904-104179212:104179305-104181761	Observed	1.2541	0.0467	68.75
+DNA_REPAIR_PATHWAY	SKCM	CHEK2|11200	-	SE	chr22:29108005-29115383:29115473-29120965	Observed	1.001	-0.0275	56.25
+DNA_REPAIR_PATHWAY	SKCM	NFASC|23114	+	SE	chr1:204913534-204919685:204919702-204921139	Observed	1.001	-0.2342	75
+DNA_REPAIR_PATHWAY	SKCM	SMARCAL1|50485	+	SE	chr2:217300219-217303143:217303208-217311741	Observed	1.001	-0.121	56.25
+DNA_REPAIR_PATHWAY	SKCM	TMEM171|134285	+	A3	chr5:72424358-72427365:72424358-72427368	Observed	1.001	0.0803	56.25
+DNA_REPAIR_PATHWAY	SKCM	EZH2|2146	-	A5	chr7:148529842-148543562:148529842-148543589	Observed	0.458	-0.0109	56.25
+DNA_REPAIR_PATHWAY	SKCM	REV3L|5980	-	SE	chr6:111650941-111651389:111651515-111652879	Observed	0.0908	0.34	75

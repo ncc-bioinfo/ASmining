@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	SKCM	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.4529	-0.1584	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	SKCM	HDAC6|10013	+	RI	chrX:48673082:48673147-48673241:48673300	Observed	1.2584	-0.2061	56.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	SKCM	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	1.0005	0.0947	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	SKCM	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	1.0005	-0.1414	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	SKCM	MUC1|4582	-	A3	chr1:155162074-155162577:155162038-155162577	Observed	1.0005	-0.0019	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	SKCM	CLK2|1196	-	SE	chr1:155238150-155238499:155238583-155239279	Observed	0.697	0.1191	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	SKCM	ZEB1|6935	+	A3	chr10:31750166-31784705:31750166-31784708	Observed	0.3492	0.0949	62.5

@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+COMPLEMENT_PATHWAY	SKCM	GATA3|2625	+	A3	chr10:8100804-8105956:8100804-8105959	Observed	3.7116	0.3622	56.25
+COMPLEMENT_PATHWAY	SKCM	CIITA|4261	+	A3	chr16:10992589-10992779:10992589-10992782	Observed	1.4828	0.2368	68.75
+COMPLEMENT_PATHWAY	SKCM	BRCA1|672	-	A5	chr17:41276132-41277199:41276132-41277294	Observed	1.3595	0.049	56.25
+COMPLEMENT_PATHWAY	SKCM	LTA|4049	+	A3	chr6:31540810-31541058:31540810-31541302	Observed	1.0576	0.0618	62.5
+COMPLEMENT_PATHWAY	SKCM	AGBL2|79841	-	SE	chr11:47703647-47707445:47707601-47711628	Observed	1.0005	-0.0691	62.5
+COMPLEMENT_PATHWAY	SKCM	CLK1|1195	-	RI	chr2:201724403:201724469-201725961:201726189	Observed	1.0005	0.0541	56.25
+COMPLEMENT_PATHWAY	SKCM	DYSF|8291	+	SE	chr2:71766369-71776480:71776521-71778171	Observed	1.0005	0.1704	62.5
+COMPLEMENT_PATHWAY	SKCM	PQBP1|10084	+	A3	chrX:48759319-48759510:48759319-48760009	Observed	1.0005	-0.0345	75
+COMPLEMENT_PATHWAY	SKCM	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	0.6215	-0.1297	56.25
+COMPLEMENT_PATHWAY	SKCM	C2|717	+	SE	chr6:31901742-31903700:31903838-31905096	Observed	0.5778	0.2331	62.5
