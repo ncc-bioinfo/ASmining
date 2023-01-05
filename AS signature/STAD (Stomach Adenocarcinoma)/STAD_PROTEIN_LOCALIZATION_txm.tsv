@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+PROTEIN_LOCALIZATION	STAD	DMD|1756	-	SE	chrX:31140047-31144759:31144790-31152219	Observed	2.339	-0.3924	56.25
+PROTEIN_LOCALIZATION	STAD	SYNE1|23345	-	SE	chr6:152615262-152621776:152621916-152623004	Observed	1.7439	-0.2862	62.5
+PROTEIN_LOCALIZATION	STAD	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	1.415	0.2178	68.75
+PROTEIN_LOCALIZATION	STAD	LEF1|51176	-	SE	chr4:109000770-109002742:109002825-109004512	Observed	1.3403	-0.3749	62.5
+PROTEIN_LOCALIZATION	STAD	CCDC88A|55704	-	SE	chr2:55528413-55529008:55529208-55535945	Observed	1.3148	-0.315	87.5
+PROTEIN_LOCALIZATION	STAD	CCDC88A|55704	-	SE	chr2:55523659-55526975:55527055-55528342	Observed	1.1957	-0.3239	87.5
+PROTEIN_LOCALIZATION	STAD	CCDC88A|55704	-	A3	chr2:55555571-55559702:55555568-55559702	Observed	1.0005	0.2561	62.5
+PROTEIN_LOCALIZATION	STAD	DLG1|1739	-	SE	chr3:196869639-196876614:196876667-196921296	Observed	1.0005	-0.172	68.75
+PROTEIN_LOCALIZATION	STAD	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	1.0005	0.2199	75
+PROTEIN_LOCALIZATION	STAD	DMD|1756	-	SE	chrX:31191721-31196049:31196087-31196786	Observed	0.7146	-0.0612	62.5
+PROTEIN_LOCALIZATION	STAD	SYNE1|23345	-	A3	chr6:152605319-152614723:152605307-152614723	Observed	0.4157	0.2862	56.25

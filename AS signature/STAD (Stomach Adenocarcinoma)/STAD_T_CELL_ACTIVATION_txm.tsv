@@ -1,0 +1,26 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	STAD	FASLG|356	+	SE	chr1:172628689-172629235:172629280-172633474	Observed	2.5328	0.4525	56.25
+T_CELL_ACTIVATION	STAD	PDCD1|5133	-	SE	chr2:242794135-242794350:242794505-242794773	Observed	1.9439	0.3223	81.25
+T_CELL_ACTIVATION	STAD	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	1.5434	0.3705	87.5
+T_CELL_ACTIVATION	STAD	IL2RA|3559	-	SE	chr10:6061904-6063441:6063656-6066207	Observed	1.3894	0.0185	87.5
+T_CELL_ACTIVATION	STAD	LCK|3932	+	SE	chr1:32741664-32741938:32742090-32742208	Observed	1.335	0.1329	62.5
+T_CELL_ACTIVATION	STAD	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.001	0.1315	81.25
+T_CELL_ACTIVATION	STAD	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.001	-0.3403	62.5
+T_CELL_ACTIVATION	STAD	PDCD1|5133	-	A5	chr2:242794505-242794773:242794505-242795009	Observed	1.001	0.3488	62.5
+T_CELL_ACTIVATION	STAD	PTPN22|26191	-	SE	chr1:114399063-114399170:114399241-114400360	Observed	1.001	0.2984	68.75
+T_CELL_ACTIVATION	STAD	CD46|4179	+	SE	chr1:207940540-207941124:207941168-207943666	Observed	0.8069	0.12	56.25
+T_CELL_ACTIVATION	STAD	CD28|940	+	SE	chr2:204571471-204591356:204591712-204594371	Observed	0.6664	0.3331	81.25
+T_CELL_ACTIVATION	STAD	LCK|3932	+	RI	chr1:32740338:32740419-32740594:32740684	Observed	0.5923	-0.1331	62.5
+T_CELL_ACTIVATION	STAD	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	0.4935	0.3072	81.25
