@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+ANGIOGENESIS	CESC	TPM1|7168	+	MX	chr15:63353138-63353397:63353472-63354414:63353138-63353912:63353987-63354414	Observed	1.4367	-0.3731	75
+ANGIOGENESIS	CESC	HSPG2|3339	-	A3	chr1:22211170-22211260:22211167-22211260	Observed	1.3852	0.1993	81.25
+ANGIOGENESIS	CESC	SULF2|55959	-	SE	chr20:46287136-46288143:46288196-46288441	Observed	1.3227	0.6276	81.25
+ANGIOGENESIS	CESC	TIE1|7075	+	SE	chr1:43773243-43773467:43773595-43774657	Observed	1.3139	0.5503	81.25
+ANGIOGENESIS	CESC	ERG|2078	-	SE	chr21:39795483-39817327:39817544-39947586	Observed	1.001	0.2694	75
+ANGIOGENESIS	CESC	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.001	0.5178	93.75
+ANGIOGENESIS	CESC	TEK|7010	+	A5	chr9:27205063-27206580:27205060-27206580	Observed	0.5441	0.4735	87.5

@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	CESC	MYBL2|4605	+	SE	chr20:42302539-42310424:42310495-42311434	Observed	1.3085	0.0323	62.5
+CELL_CYCLE_PATHWAY	CESC	ATM|472	+	SE	chr11:108093913-108095511:108095598-108098322	Observed	1.001	0.0554	56.25
+CELL_CYCLE_PATHWAY	CESC	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	1.001	0.1917	62.5
+CELL_CYCLE_PATHWAY	CESC	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	1.001	0.1024	62.5
+CELL_CYCLE_PATHWAY	CESC	BRCA1|672	-	A5	chr17:41243049-41243452:41243049-41246761	Observed	1.001	-0.0664	62.5
+CELL_CYCLE_PATHWAY	CESC	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	1.001	-0.0679	68.75
+CELL_CYCLE_PATHWAY	CESC	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	0.8435	0.0532	87.5
+CELL_CYCLE_PATHWAY	CESC	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	0.0721	-0.0303	56.25
+CELL_CYCLE_PATHWAY	CESC	IFI27|3429	+	SE	chr14:94577143-94577971:94578119-94581197	Observed	0.0252	-0.1294	56.25
