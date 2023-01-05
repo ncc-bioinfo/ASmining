@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+TRANSLATION	LIHC	FBN1|2200	-	SE	chr15:48719970-48720079:48720140-48720543	Observed	3.1225	0.7122	87.5
+TRANSLATION	LIHC	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	1.8704	0.5478	81.25
+TRANSLATION	LIHC	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	1.5957	-0.7118	81.25
+TRANSLATION	LIHC	MKNK2|2872	-	A3	chr19:2039855-2040133:2037828-2040133	Observed	1.5806	-0.5235	75
+TRANSLATION	LIHC	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	1.0005	-0.562	87.5
+TRANSLATION	LIHC	TRAPPC2|6399	-	SE	chrX:13738101-13752169:13752304-13752644	Observed	1.0005	-0.1605	75
+TRANSLATION	LIHC	FLII|2314	-	A3	chr17:18155130-18155313:18155127-18155313	Observed	0.8887	-0.7059	75
+TRANSLATION	LIHC	DMPK|1760	-	A3	chr19:46274318-46274608:46274314-46274608	Observed	0.8579	-0.5536	75
+TRANSLATION	LIHC	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	0.6198	-0.5765	81.25
+TRANSLATION	LIHC	ELN|2006	+	SE	chr7:73471043-73471970:73472026-73474216	Observed	0.4773	-0.3459	75
+TRANSLATION	LIHC	NIPBL|25836	+	A5	chr5:37064121-37064629:37064080-37064629	Observed	0.1484	0.6948	81.25
