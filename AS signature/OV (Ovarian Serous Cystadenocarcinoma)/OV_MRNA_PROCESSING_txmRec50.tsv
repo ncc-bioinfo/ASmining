@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+MRNA_PROCESSING	OV	PQBP1|10084	+	SE	chrX:48759319-48759496:48759794-48760009	Observed	1.3945	-0.1788	56.25
+MRNA_PROCESSING	OV	NUMA1|4926	-	SE	chr11:71721900-71723447:71723488-71723941	Observed	1.1735	-0.333	56.25
+MRNA_PROCESSING	OV	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	1.001	-0.1673	56.25
+MRNA_PROCESSING	OV	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	1.001	-0.132	62.5
+MRNA_PROCESSING	OV	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.001	-0.1672	68.75
+MRNA_PROCESSING	OV	NUP62|23636	-	A3	chr19:50431105-50432583:50431072-50432583	Observed	1.001	0.0235	56.25
+MRNA_PROCESSING	OV	OPA1|4976	+	SE	chr3:193336725-193343881:193343991-193349401	Observed	1.001	-0.1289	62.5
+MRNA_PROCESSING	OV	PQBP1|10084	+	A5	chrX:48755365-48755775:48755297-48755775	Observed	1.001	-0.3038	56.25
+MRNA_PROCESSING	OV	CTSB|1508	-	A5	chr8:11710988-11718870:11710988-11718915	Observed	0.2896	0.0241	68.75
+MRNA_PROCESSING	OV	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	0.1423	0.2892	62.5

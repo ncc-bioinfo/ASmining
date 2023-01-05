@@ -1,0 +1,28 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	OV	FYN|2534	-	MX	chr6:112017659-112020718:112020873-112024088:112017659-112021307:112021471-112024088	Observed	3.8179	0.5654	87.5
+T_CELL_ACTIVATION	OV	PTPN22|26191	-	SE	chr1:114399063-114399170:114399241-114400360	Observed	1.8272	0.3538	68.75
+T_CELL_ACTIVATION	OV	PTPRC|5788	+	SE	chr1:198668833-198671516:198671659-198672427	Observed	1.4135	0.3843	81.25
+T_CELL_ACTIVATION	OV	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.4094	-0.0675	81.25
+T_CELL_ACTIVATION	OV	CD28|940	+	RI	chr2:204591356:204591421-204591674:204591712	Observed	1.001	0.2093	75
+T_CELL_ACTIVATION	OV	CD28|940	+	SE	chr2:204571471-204591356:204591712-204594371	Observed	1.001	0.1286	81.25
+T_CELL_ACTIVATION	OV	CD28|940	+	SE	chr2:204591712-204594371:204594495-204599507	Observed	1.001	0.2138	87.5
+T_CELL_ACTIVATION	OV	CD6|923	+	SE	chr11:60781035-60781391:60781486-60783185	Observed	1.001	-0.0761	62.5
+T_CELL_ACTIVATION	OV	CD6|923	+	SE	chr11:60785485-60785761:60785865-60786726	Observed	1.001	0.0438	87.5
+T_CELL_ACTIVATION	OV	FYN|2534	-	SE	chr6:112017659-112020718:112020873-112024088	Observed	1.001	0.2266	87.5
+T_CELL_ACTIVATION	OV	LCK|3932	+	RI	chr1:32740338:32740419-32740594:32740684	Observed	1.001	0.0101	62.5
+T_CELL_ACTIVATION	OV	LCK|3932	+	SE	chr1:32741664-32741938:32742090-32742208	Observed	1.001	-0.0187	62.5
+T_CELL_ACTIVATION	OV	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.001	-0.1561	62.5
+T_CELL_ACTIVATION	OV	CD6|923	+	SE	chr11:60781486-60783185:60783307-60784951	Observed	0.7443	-0.0425	56.25
+T_CELL_ACTIVATION	OV	PTPRC|5788	+	SE	chr1:198661502-198665841:198666038-198668693	Observed	0.0335	-0.2395	87.5

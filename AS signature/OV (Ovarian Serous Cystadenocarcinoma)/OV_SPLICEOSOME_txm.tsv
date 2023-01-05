@@ -1,0 +1,25 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	OV	POMT1|10585	+	SE	chr9:134381840-134382738:134382901-134384298	Observed	2.0042	-0.3088	50
+SPLICEOSOME	OV	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	1.5307	0.2684	56.25
+SPLICEOSOME	OV	MCL1|4170	-	RI	chr1:150547037:150548887-150548888:150549967	Observed	1.4495	0.2796	56.25
+SPLICEOSOME	OV	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.4154	-0.0408	87.5
+SPLICEOSOME	OV	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	1.3477	-0.1592	75
+SPLICEOSOME	OV	SMARCA1|6594	-	SE	chrX:128626070-128627017:128627052-128630727	Observed	1.2565	-0.0278	56.25
+SPLICEOSOME	OV	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.1153	-0.2998	62.5
+SPLICEOSOME	OV	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.0873	-0.3497	75
+SPLICEOSOME	OV	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.0005	-0.343	68.75
+SPLICEOSOME	OV	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	0.6544	0.167	56.25
+SPLICEOSOME	OV	ANO1|55107	+	RI	chr11:70033844:70035001-70035002:70035649	Observed	0.2857	0.3623	62.5
+SPLICEOSOME	OV	ANXA6|309	-	SE	chr5:150489407-150490188:150490205-150496688	Observed	0.0261	-0.2297	68.75
