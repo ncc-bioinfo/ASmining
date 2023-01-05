@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+ANGIOGENESIS	PRAD	TPM1|7168	+	MX	chr15:63353138-63353397:63353472-63354414:63353138-63353912:63353987-63354414	Observed	2.4365	-0.3408	75
+ANGIOGENESIS	PRAD	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	2.2299	0.556	93.75
+ANGIOGENESIS	PRAD	PKD2|5311	+	SE	chr4:88977419-88979135:88979255-88983058	Observed	2.0904	0.6782	75
+ANGIOGENESIS	PRAD	HSPG2|3339	-	A3	chr1:22211170-22211260:22211167-22211260	Observed	1.5207	0.2427	81.25
+ANGIOGENESIS	PRAD	VCAN|1462	+	SE	chr5:82808215-82832826:82838087-82841356	Observed	1.3913	0.6238	81.25
+ANGIOGENESIS	PRAD	SULF2|55959	-	SE	chr20:46287136-46288143:46288196-46288441	Observed	1.313	0.4911	81.25
+ANGIOGENESIS	PRAD	TEK|7010	+	A5	chr9:27205063-27206580:27205060-27206580	Observed	1.0005	0.4758	87.5
+ANGIOGENESIS	PRAD	TEK|7010	+	SE	chr9:27173360-27180238:27180366-27183457	Observed	0.9872	0.5408	87.5

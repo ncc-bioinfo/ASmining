@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPLICATION_PATHWAY	PRAD	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	3.1241	0.2499	62.5
+DNA_REPLICATION_PATHWAY	PRAD	NF1|4763	+	SE	chr17:29490394-29496909:29497015-29508440	Observed	1.928	-0.3428	62.5
+DNA_REPLICATION_PATHWAY	PRAD	CHEK1|1111	+	SE	chr11:125496728-125497502:125497725-125499127	Observed	1.2628	0.2376	62.5
+DNA_REPLICATION_PATHWAY	PRAD	PRKDC|5591	-	SE	chr8:48691654-48694723:48694815-48694939	Observed	1.2167	0.0011	62.5
+DNA_REPLICATION_PATHWAY	PRAD	DDR1|780	+	SE	chr6:30852487-30853402:30853457-30856465	Observed	1.2114	0.1439	56.25
+DNA_REPLICATION_PATHWAY	PRAD	NF1|4763	+	SE	chr17:29576137-29579956:29580018-29585362	Observed	1.0005	-0.1609	68.75
+DNA_REPLICATION_PATHWAY	PRAD	SMC2|10592	+	A5	chr9:106856767-106857605:106856758-106857605	Observed	0.6849	-0.0076	56.25
+DNA_REPLICATION_PATHWAY	PRAD	ARHGEF15|22899	+	SE	chr17:8215958-8216240:8216572-8216819	Observed	0.0086	-0.1093	56.25

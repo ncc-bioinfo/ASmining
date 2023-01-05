@@ -1,0 +1,25 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	PRAD	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	4.4956	0.3727	68.75
+CELL_CYCLE_PATHWAY	PRAD	CDK1|983	+	A5	chr10:62538426-62539899:62538328-62539899	Observed	2.0748	0.1598	18.75
+CELL_CYCLE_PATHWAY	PRAD	AURKA|6790	-	A5	chr20:54963258-54966999:54963258-54967210	Observed	1.8702	0.3244	62.5
+CELL_CYCLE_PATHWAY	PRAD	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	1.7206	0.2941	62.5
+CELL_CYCLE_PATHWAY	PRAD	AURKA|6790	-	SE	chr20:54963258-54963743:54963840-54965612	Observed	1.7129	0.2927	56.25
+CELL_CYCLE_PATHWAY	PRAD	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967210	Observed	1.6668	0.296	56.25
+CELL_CYCLE_PATHWAY	PRAD	C2|717	+	MX	chr6:31901560-31901644:31901742-31905096:31901560-31903700:31903838-31905096	Observed	1.3486	-0.0771	68.75
+CELL_CYCLE_PATHWAY	PRAD	MYBL2|4605	+	SE	chr20:42302539-42310424:42310495-42311434	Observed	1.1318	0.3265	62.5
+CELL_CYCLE_PATHWAY	PRAD	AURKA|6790	-	SE	chr20:54963258-54965612:54965721-54967224	Observed	1.001	0.2059	56.25
+CELL_CYCLE_PATHWAY	PRAD	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	1.001	0.1861	56.25
+CELL_CYCLE_PATHWAY	PRAD	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	0.36	-0.195	87.5
+CELL_CYCLE_PATHWAY	PRAD	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	0.0044	0.0885	62.5

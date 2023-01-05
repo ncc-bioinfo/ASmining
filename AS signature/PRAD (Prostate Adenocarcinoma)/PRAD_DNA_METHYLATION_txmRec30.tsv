@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_METHYLATION	PRAD	CD47|961	-	SE	chr3:107766139-107769425:107769449-107770786	Observed	2.8179	0.3261	31.25
+DNA_METHYLATION	PRAD	CD44|960	+	SE	chr11:35211612-35218293:35218421-35219668	Observed	2.5424	0.0582	37.5
+DNA_METHYLATION	PRAD	STAG2|10735	+	SE	chrX:123095706-123155217:123155281-123156381	Observed	1.725	-0.0922	62.5
+DNA_METHYLATION	PRAD	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	1.6915	-0.3401	93.75
+DNA_METHYLATION	PRAD	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.3363	-0.1952	56.25
+DNA_METHYLATION	PRAD	MAPK7|5598	+	A5	chr17:19281943-19282209:19281855-19282209	Observed	1.1738	-0.1134	62.5
+DNA_METHYLATION	PRAD	CDKAL1|54901	+	SE	chr6:21065459-21108632:21108694-21198252	Observed	1.0005	-0.115	56.25
+DNA_METHYLATION	PRAD	NXN|64359	-	SE	chr17:707046-708308:708487-722679	Observed	0.771	-0.2013	56.25
+DNA_METHYLATION	PRAD	PEG3|5178	-	A5	chr19:57334204-57334958:57334204-57334961	Observed	0.4284	0.0272	56.25
+DNA_METHYLATION	PRAD	TET2|54790	+	SE	chr4:106068136-106111517:106111662-106155054	Observed	0.0253	-0.1411	68.75

@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+FOCAL_ADHESION_PATHWAY	PRAD	COL16A1|1307	-	A5	chr1:32121103-32121699:32121103-32122001	Observed	2.3746	-0.5204	100
+FOCAL_ADHESION_PATHWAY	PRAD	FN1|2335	-	SE	chr2:216244040-216245534:216245803-216246935	Observed	2.1019	0.4299	37.5
+FOCAL_ADHESION_PATHWAY	PRAD	PTK2B|2185	+	SE	chr8:27301788-27303311:27303436-27308266	Observed	1.9969	-0.1848	50
+FOCAL_ADHESION_PATHWAY	PRAD	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	1.8054	-0.3637	75
+FOCAL_ADHESION_PATHWAY	PRAD	PRPF4B|8899	+	A5	chr6:4060920-4061249:4060878-4061249	Observed	1.7741	0.5125	81.25
+FOCAL_ADHESION_PATHWAY	PRAD	CCDC88A|55704	-	A3	chr2:55555571-55559702:55555568-55559702	Observed	1.619	-0.5328	68.75
+FOCAL_ADHESION_PATHWAY	PRAD	FN1|2335	-	MX	chr2:216230353-216232586:216232750-216236632:216230353-216235017:216235155-216236632	Observed	1.001	0.0281	62.5
