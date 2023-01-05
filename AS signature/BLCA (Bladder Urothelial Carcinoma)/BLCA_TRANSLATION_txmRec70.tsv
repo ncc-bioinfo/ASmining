@@ -1,0 +1,28 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+TRANSLATION	BLCA	DMPK|1760	-	A3	chr19:46274318-46274608:46274314-46274608	Observed	2.283	-0.4503	75
+TRANSLATION	BLCA	DHX9|1660	+	RI	chr1:182852274:182852351-182852455:182852503	Observed	2.0648	-0.543	81.25
+TRANSLATION	BLCA	SYNE1|23345	-	SE	chr6:152615262-152621776:152621916-152623004	Observed	1.7989	-0.2183	93.75
+TRANSLATION	BLCA	FBN1|2200	-	SE	chr15:48719970-48720079:48720140-48720543	Observed	1.7597	0.5512	87.5
+TRANSLATION	BLCA	FLII|2314	-	A3	chr17:18155130-18155313:18155127-18155313	Observed	1.6389	-0.5552	75
+TRANSLATION	BLCA	TRAPPC2|6399	-	SE	chrX:13738101-13752169:13752304-13752644	Observed	1.3674	-0.2412	75
+TRANSLATION	BLCA	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.2929	-0.4416	81.25
+TRANSLATION	BLCA	NIPBL|25836	+	A5	chr5:37064121-37064629:37064080-37064629	Observed	1.1369	0.5313	81.25
+TRANSLATION	BLCA	ELN|2006	+	SE	chr7:73471043-73471970:73472026-73474216	Observed	1.1148	-0.3082	75
+TRANSLATION	BLCA	MKNK2|2872	-	A3	chr19:2039855-2040133:2037828-2040133	Observed	1.0766	-0.3329	75
+TRANSLATION	BLCA	ILF3|3609	+	A3	chr19:10794646-10795092:10794646-10795535	Observed	1.0636	-0.5466	81.25
+TRANSLATION	BLCA	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	1.0005	-0.5499	81.25
+TRANSLATION	BLCA	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	1.0005	-0.4807	87.5
+TRANSLATION	BLCA	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	0.667	0.4939	81.25
+TRANSLATION	BLCA	PML|5371	+	A3	chr15:74317268-74325497:74317268-74326819	Observed	0.5903	-0.1854	75
