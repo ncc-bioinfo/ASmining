@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	PTK2B|2185	+	SE	chr8:27301788-27303311:27303436-27308266	Observed	3.3549	-0.4128	100
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	IL32|9235	+	A5	chr16:3115711-3115785:3115688-3115785	Observed	3.141	0.3412	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	ITGAM|3684	+	SE	chr16:31308975-31309063:31309275-31332562	Observed	2.1775	0.2797	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	1.6694	-0.316	56.25
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	CD46|4179	+	SE	chr1:207940540-207941124:207941168-207943666	Observed	1.5193	0.2238	62.5
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.0005	-0.0741	68.75
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	IL32|9235	+	SE	chr16:3115495-3115622:3115688-3115785	Observed	0.2586	0.2692	87.5
+INFLAMMATORY_RESPONSE_PATHWAY	LUSC	CD80|941	-	SE	chr3:119246688-119248689:119248784-119255984	Observed	0.0097	-0.0307	62.5

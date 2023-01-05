@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	LUSC	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967210	Observed	2.1046	-0.1934	56.25
+CELL_CYCLE_PATHWAY	LUSC	IFI27|3429	+	SE	chr14:94577143-94577971:94578119-94581197	Observed	1.7345	-0.0395	56.25
+CELL_CYCLE_PATHWAY	LUSC	AURKA|6790	-	A5	chr20:54963258-54967210:54963258-54967224	Observed	1.4039	0.1507	62.5
+CELL_CYCLE_PATHWAY	LUSC	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	1.2472	0.1948	62.5
+CELL_CYCLE_PATHWAY	LUSC	ATM|472	+	SE	chr11:108093913-108095511:108095598-108098322	Observed	1.0005	-0.0072	56.25
+CELL_CYCLE_PATHWAY	LUSC	C2|717	+	MX	chr6:31901560-31901644:31901742-31905096:31901560-31903700:31903838-31905096	Observed	0.8403	-0.103	68.75
+CELL_CYCLE_PATHWAY	LUSC	BRCA1|672	-	A3	chr17:41251897-41256139:41251894-41256139	Observed	0.6009	-0.0877	56.25
+CELL_CYCLE_PATHWAY	LUSC	AURKA|6790	-	A5	chr20:54963258-54966999:54963258-54967210	Observed	0.4386	-0.1539	62.5
+CELL_CYCLE_PATHWAY	LUSC	BRCA1|672	-	A5	chr17:41243049-41243452:41243049-41246761	Observed	0.2187	-0.2626	62.5
+CELL_CYCLE_PATHWAY	LUSC	AURKA|6790	-	SE	chr20:54963258-54965612:54965721-54967224	Observed	0.0137	-0.073	56.25

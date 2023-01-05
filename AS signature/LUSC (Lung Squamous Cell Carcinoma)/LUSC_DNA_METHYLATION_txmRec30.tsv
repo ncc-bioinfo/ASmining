@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_METHYLATION	LUSC	SLC30A5|64924	+	A3	chr5:68398955-68399789:68398955-68400458	Observed	2.6037	0.3159	37.5
+DNA_METHYLATION	LUSC	WFS1|7466	+	A3	chr4:6271741-6279178:6271741-6279182	Observed	2.0038	-0.1044	43.75
+DNA_METHYLATION	LUSC	STAG2|10735	+	SE	chrX:123095706-123155217:123155281-123156381	Observed	1.3679	-0.0793	62.5
+DNA_METHYLATION	LUSC	MAPK7|5598	+	A5	chr17:19281943-19282209:19281855-19282209	Observed	1.0005	-0.1669	62.5
+DNA_METHYLATION	LUSC	NOS3|4846	+	SE	chr7:150688388-150690841:150691049-150692291	Observed	1.0005	-0.2775	56.25
+DNA_METHYLATION	LUSC	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	0.619	-0.3639	93.75
+DNA_METHYLATION	LUSC	CDKAL1|54901	+	SE	chr6:21065459-21108632:21108694-21198252	Observed	0.4078	-0.0806	56.25
+DNA_METHYLATION	LUSC	TET2|54790	+	SE	chr4:106068136-106111517:106111662-106155054	Observed	0.0426	-0.1449	68.75
