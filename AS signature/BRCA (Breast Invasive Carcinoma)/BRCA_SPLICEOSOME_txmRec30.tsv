@@ -1,0 +1,28 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	BRCA	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	2.2286	-0.1605	50
+SPLICEOSOME	BRCA	ANO1|55107	+	RI	chr11:70033844:70035001-70035002:70035649	Observed	1.6637	0.4321	62.5
+SPLICEOSOME	BRCA	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.4913	-0.4717	68.75
+SPLICEOSOME	BRCA	MECP2|4204	-	SE	chrX:153298008-153357642:153357765-153363061	Observed	1.4068	-0.3512	75
+SPLICEOSOME	BRCA	ADARB1|104	+	RI	chr21:46641933:46642195-46645462:46646478	Observed	1.3455	-0.222	62.5
+SPLICEOSOME	BRCA	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	1.2708	-0.5116	62.5
+SPLICEOSOME	BRCA	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	1.1829	0.3681	56.25
+SPLICEOSOME	BRCA	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.1214	-0.426	75
+SPLICEOSOME	BRCA	USP15|9958	+	SE	chr12:62719714-62743002:62743088-62749112	Observed	1.0148	-0.2056	56.25
+SPLICEOSOME	BRCA	DIS3|22894	-	MX	chr13:73352518-73354984:73355141-73355743:73352518-73355427:73355494-73355743	Observed	1.001	0.0971	56.25
+SPLICEOSOME	BRCA	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.001	-0.3307	87.5
+SPLICEOSOME	BRCA	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	1.001	0.1455	56.25
+SPLICEOSOME	BRCA	SMARCA1|6594	-	SE	chrX:128626070-128627017:128627052-128630727	Observed	1.001	-0.1118	56.25
+SPLICEOSOME	BRCA	ANXA6|309	-	SE	chr5:150489407-150490188:150490205-150496688	Observed	0.6448	-0.2109	68.75
+SPLICEOSOME	BRCA	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	0.4733	-0.3332	75

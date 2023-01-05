@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+NFKB_PATHWAY	BRCA	PTPRC|5788	+	SE	chr1:198668833-198671516:198671659-198672427	Observed	2.3778	0.2536	62.5
+NFKB_PATHWAY	BRCA	PRKCB|5579	+	A3	chr16:24202551-24225979:24202551-24231282	Observed	2.0534	-0.1779	56.25
+NFKB_PATHWAY	BRCA	CASP8|841	+	A5	chr2:202098345-202098739:202098277-202098739	Observed	1.6337	-0.0443	56.25
+NFKB_PATHWAY	BRCA	IKBKG|8517	+	A5	chrX:153790003-153791025:153789999-153791025	Observed	1.5046	0.1047	56.25
+NFKB_PATHWAY	BRCA	PTPRC|5788	+	SE	chr1:198661502-198665841:198666038-198668693	Observed	1.415	-0.053	62.5
+NFKB_PATHWAY	BRCA	ABCC1|4363	+	SE	chr16:16173335-16177223:16177399-16184262	Observed	1.1523	0.1645	56.25
+NFKB_PATHWAY	BRCA	PLAU|5328	+	A5	chr10:75670980-75671283:75670976-75671283	Observed	0.9095	-0.1959	75
+NFKB_PATHWAY	BRCA	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	0.5123	-0.0239	68.75
+NFKB_PATHWAY	BRCA	ABCC1|4363	+	SE	chr16:16173335-16180681:16180848-16184262	Observed	0.0542	0.1818	56.25
