@@ -1,0 +1,27 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+T_CELL_ACTIVATION	COAD	PTPRC|5788	+	SE	chr1:198668833-198671516:198671659-198672427	Observed	3.4057	0.4376	81.25
+T_CELL_ACTIVATION	COAD	PTPRC|5788	+	SE	chr1:198661502-198665841:198666038-198668693	Observed	2.639	-0.1769	87.5
+T_CELL_ACTIVATION	COAD	C3|718	-	A5	chr19:6685157-6686131:6685157-6686135	Observed	2.3489	-0.6157	31.25
+T_CELL_ACTIVATION	COAD	CD4|920	+	A5	chr12:6923629-6923925:6923444-6923925	Observed	2.1703	0.5235	50
+T_CELL_ACTIVATION	COAD	CD4|920	+	A5	chr12:6923466-6923925:6923444-6923925	Observed	2.1139	0.5613	37.5
+T_CELL_ACTIVATION	COAD	IL2RA|3559	-	SE	chr10:6061904-6063441:6063656-6066207	Observed	1.4017	0.0199	87.5
+T_CELL_ACTIVATION	COAD	PDCD1|5133	-	A5	chr2:242794505-242794773:242794505-242795009	Observed	1.3477	0.147	62.5
+T_CELL_ACTIVATION	COAD	FASLG|356	+	SE	chr1:172628689-172629235:172629280-172633474	Observed	1.338	0.2937	56.25
+T_CELL_ACTIVATION	COAD	CD6|923	+	SE	chr11:60785485-60785761:60785865-60786726	Observed	1.001	0.1199	87.5
+T_CELL_ACTIVATION	COAD	CD86|942	+	SE	chr3:121774350-121810448:121810497-121822359	Observed	1.001	0.3689	81.25
+T_CELL_ACTIVATION	COAD	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.001	-0.3968	62.5
+T_CELL_ACTIVATION	COAD	PDCD1|5133	-	SE	chr2:242794135-242794350:242794505-242794773	Observed	1.001	0.2295	81.25
+T_CELL_ACTIVATION	COAD	PTPN22|26191	-	SE	chr1:114399063-114399170:114399241-114400360	Observed	1.001	0.4065	68.75
+T_CELL_ACTIVATION	COAD	CD46|4179	+	SE	chr1:207940540-207941124:207941168-207943666	Observed	0.191	0.0373	56.25

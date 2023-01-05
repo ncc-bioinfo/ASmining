@@ -1,0 +1,21 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+PROTEIN_LOCALIZATION	COAD	CCDC88A|55704	-	SE	chr2:55528413-55529008:55529208-55535945	Observed	1.3149	-0.3722	87.5
+PROTEIN_LOCALIZATION	COAD	NF1|4763	+	SE	chr17:29687721-29694243:29694296-29701031	Observed	1.2524	0.5873	56.25
+PROTEIN_LOCALIZATION	COAD	CCDC88A|55704	-	SE	chr2:55523659-55526975:55527055-55528342	Observed	1.2442	-0.3597	87.5
+PROTEIN_LOCALIZATION	COAD	FGFR1|2260	-	A5	chr8:38272419-38273363:38272419-38273388	Observed	1.167	0.4285	75
+PROTEIN_LOCALIZATION	COAD	DMD|1756	-	SE	chrX:31140047-31144759:31144790-31152219	Observed	1.1043	-0.5247	56.25
+PROTEIN_LOCALIZATION	COAD	DLG1|1739	-	SE	chr3:196869639-196876614:196876667-196921296	Observed	1.001	-0.3491	68.75
+PROTEIN_LOCALIZATION	COAD	LEF1|51176	-	SE	chr4:109000770-109002742:109002825-109004512	Observed	1.001	-0.2262	62.5
+PROTEIN_LOCALIZATION	COAD	SYNE1|23345	-	SE	chr6:152464900-152466622:152466690-152469180	Observed	1.001	0.0366	62.5

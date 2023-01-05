@@ -1,0 +1,28 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+SPLICEOSOME	COAD	MYB|4602	+	MX	chr6:135515056-135515494:135515598-135520046:135515056-135516886:135517140-135520046	Observed	2.0031	0.1643	12.5
+SPLICEOSOME	COAD	EIF4G3|8672	-	MX	chr1:21231464-21267984:21268823-21295967:21231464-21276496:21276604-21295967	Observed	1.6057	-0.3818	87.5
+SPLICEOSOME	COAD	EIF4G3|8672	-	SE	chr1:21231464-21267984:21268823-21276496	Observed	1.4156	-0.4625	62.5
+SPLICEOSOME	COAD	TP53|7157	-	SE	chr17:7573008-7573927:7574033-7576853	Observed	1.4153	-0.4471	68.75
+SPLICEOSOME	COAD	SON|6651	+	SE	chr21:34918685-34921782:34927697-34929462	Observed	1.3834	-0.4981	62.5
+SPLICEOSOME	COAD	ANO1|55107	+	SE	chr11:69999234-70002017:70002094-70003053	Observed	1.247	-0.4382	75
+SPLICEOSOME	COAD	DYSF|8291	+	SE	chr2:71840540-71847677:71847739-71871095	Observed	1.0005	0.3267	56.25
+SPLICEOSOME	COAD	NR3C1|2908	-	SE	chr5:142693733-142779221:142780417-142783941	Observed	1.0005	-0.4261	62.5
+SPLICEOSOME	COAD	SAP130|79595	-	A3	chr2:128744536-128747138:128744533-128747138	Observed	1.0005	-0.3857	75
+SPLICEOSOME	COAD	SMARCA1|6594	-	SE	chrX:128626070-128627017:128627052-128630727	Observed	1.0005	-0.1192	56.25
+SPLICEOSOME	COAD	FAS|355	+	SE	chr10:90770357-90770510:90770572-90771756	Observed	0.5859	0.1452	56.25
+SPLICEOSOME	COAD	DIS3|22894	-	MX	chr13:73352518-73354984:73355141-73355743:73352518-73355427:73355494-73355743	Observed	0.4352	-0.0231	56.25
+SPLICEOSOME	COAD	MCL1|4170	-	RI	chr1:150547037:150548887-150548888:150549967	Observed	0.2846	0.2691	56.25
+SPLICEOSOME	COAD	ANXA6|309	-	SE	chr5:150489407-150490188:150490205-150496688	Observed	0.2079	-0.2895	68.75
+SPLICEOSOME	COAD	USP15|9958	+	SE	chr12:62719714-62743002:62743088-62749112	Observed	0.0695	-0.1887	56.25
