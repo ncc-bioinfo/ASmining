@@ -1,4 +1,13 @@
-pathway	gene	frequency	log_likelihood	correlation	baysian	rank	pubmed_id
+# Column descriptions
+# Pathway	             : Pathway names
+# Gene	               : Official gene symbol
+# Frequency	           : The number of literatures to contain sentences existing both pathway and gene
+# Log_likelihood       : Log likelihood of the co-occurrence of pathway and gene pairs
+# Correlation          : Correlation coefficient of the co-occurrence of pathway and gene pairs
+# Bayesian             : Bayesian probability of the co-occurrence of pathway and gene pairs
+# Rank                 : Co-occurrence rank merged from log-likelihood, correlation, and Bayesian probability
+# Pubmed_ID            : Literature IDs to acquire corresponding information
+Pathway	Gene	Frequency	Log_likelihood	Correlation	Bayesian	Rank	Pubmed_id
 ABC_TRANSPORTERS	ABCB4	1	9.57179870951	0.432963086278	0.0526315789474	1	15077010
 ABC_TRANSPORTERS	CD9	1	9.57179870951	0.577339254117	0.0350877192982	2	23799853
 ABC_TRANSPORTERS	ABCB6	6	65.9162335055	0.451757317972	0.105263157895	3	11017767,11478798,18405356,25360778
