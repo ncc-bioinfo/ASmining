@@ -1,0 +1,20 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	ESCA	PARD3|56288	-	SE	chr10:34620272-34625127:34625171-34626203	Observed	2.4239	-0.5715	25
+EPITHELIAL_MESENCHYMAL_TRANSITION	ESCA	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	2.0071	-0.4812	81.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	ESCA	PRMT2|3275	+	SE	chr21:48055675-48056351:48056459-48056808	Observed	1.9561	0.4571	37.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	ESCA	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.5687	-0.4313	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	ESCA	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	1.5619	0.4433	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	ESCA	MUC1|4582	-	A3	chr1:155162074-155162577:155162038-155162577	Observed	1.0514	0.2699	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	ESCA	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	1.001	0.2838	62.5
