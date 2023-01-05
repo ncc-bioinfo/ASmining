@@ -1,0 +1,28 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+CELL_CYCLE_PATHWAY	LUAD	RCC1|1104	+	SE	chr1:28856451-28857035:28857085-28858315	Observed	4.2086	-0.5271	50
+CELL_CYCLE_PATHWAY	LUAD	AURKA|6790	-	A5	chr20:54963258-54966999:54963258-54967210	Observed	2.6226	0.0588	62.5
+CELL_CYCLE_PATHWAY	LUAD	CDC25C|995	-	A3	chr5:137666907-137667284:137666903-137667284	Observed	2.3715	0.0287	87.5
+CELL_CYCLE_PATHWAY	LUAD	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967210	Observed	2.3712	0.0301	56.25
+CELL_CYCLE_PATHWAY	LUAD	AURKA|6790	-	SE	chr20:54963258-54963743:54963840-54965612	Observed	2.3063	0.1587	56.25
+CELL_CYCLE_PATHWAY	LUAD	AURKA|6790	-	A5	chr20:54965721-54966999:54965721-54967224	Observed	2.154	0.2006	62.5
+CELL_CYCLE_PATHWAY	LUAD	CDC25C|995	-	SE	chr5:137664218-137665242:137665336-137666676	Observed	1.8417	0.0527	68.75
+CELL_CYCLE_PATHWAY	LUAD	MYBL2|4605	+	SE	chr20:42302539-42310424:42310495-42311434	Observed	1.6719	0.1117	62.5
+CELL_CYCLE_PATHWAY	LUAD	AURKA|6790	-	SE	chr20:54963258-54965612:54965721-54967224	Observed	1.4836	0.1849	56.25
+CELL_CYCLE_PATHWAY	LUAD	BRCA1|672	-	A5	chr17:41276132-41277288:41276132-41277294	Observed	1.4585	0.3142	56.25
+CELL_CYCLE_PATHWAY	LUAD	FARP2|9855	+	A3	chr2:242403395-242404875:242403395-242405089	Observed	1.4524	-0.2837	56.25
+CELL_CYCLE_PATHWAY	LUAD	C2|717	+	MX	chr6:31901560-31901644:31901742-31905096:31901560-31903700:31903838-31905096	Observed	1.3521	0.0125	68.75
+CELL_CYCLE_PATHWAY	LUAD	ATM|472	+	SE	chr11:108093913-108095511:108095598-108098322	Observed	1.0005	0.005	56.25
+CELL_CYCLE_PATHWAY	LUAD	BRCA1|672	-	A3	chr17:41251897-41256139:41251894-41256139	Observed	0.8021	0.0471	56.25
+CELL_CYCLE_PATHWAY	LUAD	IFI27|3429	+	SE	chr14:94577143-94577971:94578119-94581197	Observed	0.3718	0.0307	56.25

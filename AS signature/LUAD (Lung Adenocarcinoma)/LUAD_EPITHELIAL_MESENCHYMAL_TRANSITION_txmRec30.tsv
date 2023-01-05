@@ -1,0 +1,24 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	CTNND1|1500	+	SE	chr11:57529518-57556509:57556627-57558857	Observed	4.8181	0.4276	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	ENAH|55740	-	SE	chr1:225688772-225692693:225692755-225695653	Observed	4.6954	-0.4675	81.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	FGFR1|2260	-	SE	chr8:38285953-38287200:38287466-38314874	Observed	3.1831	-0.3532	68.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	FGFR2|2263	-	MX	chr10:123274833-123276833:123276977-123279493:123274833-123278196:123278343-123279493	Observed	2.7115	0.3604	43.75
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	PRMT2|3275	+	SE	chr21:48055675-48056351:48056459-48056808	Observed	2.4412	0.3864	37.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	FGF1|2246	-	SE	chr5:141975049-141980267:141980370-141993524	Observed	2.2041	-0.2666	37.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	DNM2|1785	+	SE	chr19:10916643-10919245:10919256-10922940	Observed	2.178	-0.242	37.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	MAP2K7|5609	+	SE	chr19:7968953-7969336:7969433-7970693	Observed	1.3395	-0.351	75
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	HDAC6|10013	+	RI	chrX:48673082:48673147-48673241:48673300	Observed	1.0005	-0.2121	56.25
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	SYK|6850	+	SE	chr9:93627379-93629413:93629481-93636486	Observed	0.8423	0.1821	62.5
+EPITHELIAL_MESENCHYMAL_TRANSITION	LUAD	FGFR1|2260	-	RI	chr8:38275746:38275889-38275890:38275891	Observed	0.3328	-0.1735	68.75

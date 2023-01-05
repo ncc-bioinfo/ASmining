@@ -1,0 +1,23 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+DNA_REPAIR_PATHWAY	LUAD	FANCA|2175	-	SE	chr16:89818630-89824985:89825113-89828357	Observed	4.4186	0.3781	43.75
+DNA_REPAIR_PATHWAY	LUAD	PPP1CA|5499	-	SE	chr11:67168390-67168539:67168703-67169199	Observed	3.2079	-0.3467	43.75
+DNA_REPAIR_PATHWAY	LUAD	XRCC3|7517	-	SE	chr14:104177904-104179212:104179305-104181761	Observed	2.9149	0.3307	68.75
+DNA_REPAIR_PATHWAY	LUAD	MSH2|4436	+	SE	chr2:47639699-47641408:47641557-47643435	Observed	1.8502	-0.3532	56.25
+DNA_REPAIR_PATHWAY	LUAD	SMARCAL1|50485	+	SE	chr2:217300219-217303143:217303208-217311741	Observed	1.3159	-0.2076	56.25
+DNA_REPAIR_PATHWAY	LUAD	NFASC|23114	+	SE	chr1:204913534-204919685:204919702-204921139	Observed	1.2515	-0.3246	75
+DNA_REPAIR_PATHWAY	LUAD	EZH2|2146	-	A5	chr7:148529842-148543562:148529842-148543589	Observed	1.2101	-0.0769	56.25
+DNA_REPAIR_PATHWAY	LUAD	BCOR|54880	-	A5	chrX:39911653-39913091:39911653-39913139	Observed	0.8152	0.2877	68.75
+DNA_REPAIR_PATHWAY	LUAD	REV3L|5980	-	SE	chr6:111650941-111651389:111651515-111652879	Observed	0.4433	0.3029	75
+DNA_REPAIR_PATHWAY	LUAD	BIN1|274	-	SE	chr2:127808819-127815049:127815177-127816587	Observed	0.035	0.1163	56.25
