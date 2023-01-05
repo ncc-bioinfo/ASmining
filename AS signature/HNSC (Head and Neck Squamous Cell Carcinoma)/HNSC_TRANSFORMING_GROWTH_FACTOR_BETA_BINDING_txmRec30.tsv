@@ -1,0 +1,22 @@
+# Column descriptions
+# Gene                 : Symbol | ID
+# AS_event_type        : RI (Retained intron); A3 (Alternative 3' splice site); A5 (Alternative 5' splice site); 
+#                        MX (Mutual exclusive exons); SE (Skipped exon)
+# AS_event_ID          : ID in SUPPA2 format 
+# Text_mining_gene     : "Observed", when the AS gene is also identified by text-mining analysis; "", otherwise
+# AS_event_importance  : Measured as the learned Random Forest (RF) model's feature importance 
+#                        (higher, the more important)
+# AS_event_correlation : Measured as the spearman's correlation between GSVA scores (degree of pathway enrichment)
+#                        and PSI values
+# Cancer_recurrence    : Cancer type recurrence (% out of 16 cancer types) of which the AS event shows 
+#                        positive feature importance (RF model)
+Pathway	Cancer	Gene	Strand	AS_event_type	AS_event_ID	Text_mining_gene	AS_event_importance	AS_event_correlation	Cancer_recurrence
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	FN1|2335	-	RI	chr2:216236632:216236738-216236832:216237098	Observed	3.6362	-0.5848	31.25
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	FN1|2335	-	SE	chr2:216244040-216245534:216245803-216246935	Observed	3.0799	0.5545	37.5
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	TGFBI|7045	+	RI	chr5:135382024:135382245-135382540:135382704	Observed	3.0085	-0.4771	37.5
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	TGFBI|7045	+	A5	chr5:135398376-135398875:135398362-135398875	Observed	2.7065	0.5629	50
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	PPT2|9374	+	A5	chr6:32122181-32122364:32122171-32122364	Observed	2.5113	-0.1382	43.75
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	FN1|2335	-	SE	chr2:216236738-216236832:216237098-216238045	Observed	2.0205	0.4486	31.25
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	PPT2|9374	+	RI	chr6:32133915:32134009-32134275:32134397	Observed	1.9871	-0.4425	75
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	MYH11|4629	-	MX	chr16:15876334-15878555:15878575-15880487:15876334-15880332:15880351-15880487	Observed	1.8827	-0.2335	56.25
+TRANSFORMING_GROWTH_FACTOR_BETA_BINDING	HNSC	FBN1|2200	-	SE	chr15:48719970-48720079:48720140-48720543	Observed	1.5335	-0.5528	81.25
